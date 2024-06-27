@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>Form splitter</h1>
+<p>Cadastro do splitter</p>
+
+<form action="/ctomanager/" method="post">
+  {% csrf_token  %}
+  <fieldset>
+    <legend>Selecione o tipo do {{titulo_form}}:</legend>
+    <p>
+      <input type="radio" value="8" id="8" name="splitter" checked>
+      <label for="8">1/8</label><br>
+
+      <input type="radio" value="16" id="16" name="splitter" >
+      <label for="16">1/16</label>
+    </p>
+    <button type="submit">Salvar</button>
+  </fieldset>
+
+
+</form>
+
+{% endblock %}
