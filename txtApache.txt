@@ -1,0 +1,53 @@
+//passa as permições da pasta para o usuario www-data : e grupo www-data
+=> sudo chown -R www-data:www-data /var/www/projeto_cto/
+
+//passa as permições para o usuario servido e deixa o grupo www-data
+=> sudo chown -R servidor:www-data /var/www/projeto_cto/
+
+//Desative o site padrão do Apache (opcional, mas recomendado):
+=> sudo a2dissite 000-default.conf
+
+//Ative o novo site que você criou:
+=> sudo a2ensite core_CTO_Insight.conf
+
+//Ative o módulo WSGI no Apache:
+=> sudo a2enmod wsgi
+
+//Reinicie o Apache para aplicar as mudanças
+=> sudo systemctl restart apache2
+
+//sempre que fazer mudanças no projeto principal Reinicie o apache para pegar as novas aplicações
+
+#################### antes #################
+
+Configurar o Apache para Servir sua Aplicação Django
+Crie um novo arquivo de configuração para o seu site Django no Apache. Vamos chamá-lo de myproject.conf. Crie este arquivo em /etc/apache2/sites-available/myproject.conf com o seguinte conteúdo:
+=> sudo nano /etc/apache2/sites-available/core_CTO_Insight.conf
+===> //configuração do arquivo .conf
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projeto_cto/
+
+    Alias /static /var/www/projeto_cto/static
+    <Directory /var/www/projeto_cto/static>
+        Require all granted
+    </Directory>
+
+    Alias /media /var/www/projeto_cto/media
+    <Directory /var/www/projeto_cto/media>
+        Require all granted
+    </Directory>
+
+    <Directory /var/www/projeto_cto/core_CTO_Insight>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+
+    WSGIDaemonProcess projeto_cto python-path=/var/www/projeto_cto python-home=/var/www/projeto_cto/venv
+    WSGIProcessGroup projeto_cto
+    WSGIScriptAlias / /var/www/projeto_cto/core_CTO_Insight/wsgi.py
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>

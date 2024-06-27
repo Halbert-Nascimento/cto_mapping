@@ -1,0 +1,14 @@
+[18:57, 25/06/2024] Halbert Nascimento: Fazer um campo de metragem de cabo para instalação do cliente e da CTO.
+[18:57, 25/06/2024] Halbert Nascimento: Fazer class cliente separado para pesquisa de clientes
+[18:58, 25/06/2024] Halbert Nascimento: Salvar a instância da classe CTO secundária no cliente para pesquisa completo da CTO pelo cliente
+[08:52, 26/06/2024] Halbert Nascimento: melhoria a fazer no momento esta sendo salva a numeração da caixa cto no cliente
+
+[09:03, 26/06/2024] Halbert Nascimento: criar um app para
+cliente_manager: onde faz o gerenciamento e cadastro dos clientes
+
+intalacao:  onde sera dadas as permições para os tecnicos lançar as intalações e informações das mesma, metragem, qual cto, etc...
+
+no app cto_manager: tecnicos de infra teram acesso para alterar as rotas instalar e remover cto's
+
+## Subir no repositorio git 
+###  
