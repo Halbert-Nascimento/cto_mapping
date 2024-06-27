@@ -32,7 +32,7 @@ utilizadas, e origem das CTOs, o mapeamento automatiza diversos processos e ofer
 
 Acesse o repositório do projeto para mais informações e iniciar a implementação:
 
-[Link do Repositório](https://github.com/Halbert-Nascimento)
+[Link do Repositório](https://github.com/Halbert-Nascimento/cto_mapping)
 
 
 ###### Documentação do Código Fonte:
