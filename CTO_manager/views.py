@@ -45,7 +45,29 @@ def cadastro_splitter(request):
   return HttpResponse(template.render(context, request)) # se não for post exiba a pagina sem alterações
   
 
-def cadastro_ctop(request):
+def cadastro_ctoP(request):
+  """
+    View para cadastrar uma CTO Primária (CTOP).
+
+    Quando o usuário acessa a página de cadastro, essa função carrega o template
+    'CTO_manager/ctop_form.html' e exibe o formulário. Ela também recupera todos
+    os objetos do modelo 'Splitter' do banco de dados para exibi-los no formulário.
+
+    Se o método da requisição for POST (ou seja, o formulário foi enviado), a função
+    extrai os dados do formulário (número de CTO, tipo de splitter, cor da fibra,
+    sinal de entrada e descrição). Em seguida, verifica se um objeto 'CtoPrimaria'
+    com o mesmo número de CTO já existe no banco de dados. Se existir, retorna uma
+    mensagem informando que a CTOP já está cadastrada. Caso contrário, cria uma nova
+    instância de 'CtoPrimaria' com os dados fornecidos e salva no banco de dados.
+
+    Args:
+        request: Objeto HttpRequest contendo os dados da requisição.
+
+    Returns:
+        HttpResponse: Renderiza o template com o contexto atualizado ou exibe uma
+        mensagem de erro se a CTOP já estiver cadastrada.
+
+  """
 
   template = loader.get_template('CTO_manager/ctop_form.html')
   splitters = Splitter.objects.all()
@@ -74,15 +96,22 @@ def cadastro_ctop(request):
 
     
 
-    if CtoPrimaria.objects.filter(numeracao = numeracao).exists():
-       return HttpResponse("Ctop ja cadastrada")
+    if CtoPrimaria.objects.filter(numeracao = numeracao).exists(): # verifica se a numeração da cto ja existe
+       messages.error(request,f"Cto Primaria {numeracao}' ja cadastrada no sistema!")
+
+      
+       return redirect(cadastro_ctoP)
     else:
       splitter = Splitter.objects.get(id=tipo_splitter)    # pega o objeto do bando de dados Splitter e salva em splitter
-      ctop = CtoPrimaria(numeracao=numeracao,descricao= descricao,cor_fibra_entrada= cor_fibra,sinal_entrada=sinal_entrada,splitter=splitter)
+      ctop = CtoPrimaria(numeracao=numeracao,descricao= descricao,cor_fibra_entrada= cor_fibra,sinal_entrada=sinal_entrada,splitter=splitter) # cria o objeto cto com seus parametros
 
-      ctop.save()
+      ctop.save() #salva no banco de dados
+      messages.success(request, f"Cto Primaria '{numeracao}' cadastrada com sucesso!")
  
  
 
   return HttpResponse(template.render(context, request)) # se não for post exiba a pagina sem alterações
 
+
+def cadastro_ctoS(request):
+  return

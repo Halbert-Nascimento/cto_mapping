@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>Form CTO'S</h1>
+<p>Cadastro CTO ssecundaria</p>
+
+<form action="/ctomanager/ctos/" method="post">
+  {% csrf_token  %}
+  <fieldset>
+    <legend>Selecione o tipo do {{titulo_form}}:</legend>
+    <p>
+      <label for="numeracao">Numeracao da CTOP:</label>
+      <input type="number" name="numeracao" id="numeracao" required>
+    </p>
+
+    <p>
+      <label for="cor_fibra">Cor de entrada da fibra:</label>
+      <input type="text" name="cor_fibra" id="cor_fibra" required>
+    </p>
+
+    <p>
+      <label for="sinal_in">Sinal de entrada:</label>
+      <input type="number" step="0.01" name="sinal_in" id="sinal_in">
+    </p>
+
+    <p>
+      <span>Tipo do splitter: </span>
+      <br>
+
+      {% for splitter in splitters %}
+        <input type="radio" name="splitter" id="{{splitter}}" value={{splitter.id}} checked><label for="{{splitter}}">{{splitter}}</label>
+      {% endfor %}
+
+    </p>
+
+    <p>
+      <label for="descicao">Descrição:</label><br>
+      <textarea name="descicao" id="descicao" rows="6" cols="30"></textarea>
+      
+    </p>
+    
+    <br><button type="submit">Salvar</button>
+  </fieldset>
+
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
+
+
+</form>
+
+{% endblock %}
