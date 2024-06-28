@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>Form CTO'P</h1>
+<p>Cadastro CTO primaria</p>
+
+<form action="/ctomanager/ctop/" method="post">
+  {% csrf_token  %}
+  <fieldset>
+    <legend>Selecione o tipo do {{titulo_form}}:</legend>
+    
+    <button type="submit">Salvar</button>
+  </fieldset>
+
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
+
+
+</form>
+
+{% endblock %}
