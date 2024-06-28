@@ -19,6 +19,15 @@
     </p>
     <button type="submit">Salvar</button>
   </fieldset>
+  {% if msg %}
+    <p> {{msg}} </p>
+  {% endif %}
+
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
 
 
 </form>
