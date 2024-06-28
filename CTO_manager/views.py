@@ -37,7 +37,7 @@ def cadastro_splitter(request):
       
     
     else:
-      splitter = Splitter(splitter_tipo = splitter_form) # cria a estância do splitter com o valor recebido do formulario
+      splitter = Splitter(splitter_tipo = splitter_form) # cria a instância  do splitter com o valor recebido do formulario
       splitter.save() # salva no banco de dados
       messages.success(request, f"Splitter 1/{splitter_form} salvo") # cria uma mensagem temporaria para ser passada para a nova pagina com informação de sucesso
       return redirect(cadastro_splitter) # # Redireciona para a mesma página (ou para uma página de sucesso), fazendo com que a pagina do formulario seja limpa
