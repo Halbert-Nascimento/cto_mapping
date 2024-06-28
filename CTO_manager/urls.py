@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
        path('',views.cadastro_splitter, name='cadastro_splitter' ),
-       path('pag/',views.pag, name='pag' ),
+       path('ctop/',views.cadastro_ctop, name='cadastro_ctop' ),
 ]
