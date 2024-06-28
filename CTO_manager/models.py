@@ -16,14 +16,14 @@ class Splitter(models.Model):
   
 # Classe para CTO primaria, onde o pre-requisito e o cadastro do splitter para definir a quantidade de saidas (CTOs secundarias) que ela pode ter.
 class CtoPrimaria(models.Model):
-  numercao = models.IntegerField() # Numero de identificacao da CTO primaria
+  numeracao = models.IntegerField() # Numero de identificacao da CTO primaria
   descricao = models.TextField(blank=True, null=True, verbose_name='Descricao detalhada') # Informacoes detalhadas e observacoes sobre a CTO
   cor_fibra_entrada = models.CharField(max_length=20) # Cor da fibra de entrada para futuras manutencoes na caixa p
   sinal_entrada = models.FloatField() # Referencia para o sinal que esta chegando na caixa (futura implementacao para verificar atenuacoes na rota)
-  Splitter = models.ForeignKey(Splitter, on_delete=models.CASCADE) # Pre-requisito: cadastro do splitter; o tamanho do splitter define quantas CTOs secundarias a CTO primaria pode ter
+  splitter = models.ForeignKey(Splitter, on_delete=models.CASCADE) # Pre-requisito: cadastro do splitter; o tamanho do splitter define quantas CTOs secundarias a CTO primaria pode ter
 
   def __str__(self):
-    return f"CTO_P: {self.numercao}" # Retorna uma representacao em texto formatado com a numeracao da CTO primaria
+    return f"CTO_P: {self.numeracao}" # Retorna uma representacao em texto formatado com a numeracao da CTO primaria
 
 
 

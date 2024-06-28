@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 
 ## importando classes da models
-from .models import Splitter
+from .models import Splitter , CtoPrimaria, CtoSecundaria
 
 
 
@@ -47,4 +47,42 @@ def cadastro_splitter(request):
 
 def cadastro_ctop(request):
 
-  return HttpResponse("Pag cadastro cadastro_ctop!")
+  template = loader.get_template('CTO_manager/ctop_form.html')
+  splitters = Splitter.objects.all()
+
+  context = {
+    'titulo' : 'CTOP form', # titulo da pagina
+    'titulo_form': 'CTO Primaria', # titulo para formulario
+    'splitters': splitters,
+    }
+  
+  if request.method == "POST":
+    numeracao = int(request.POST['numeracao'])
+    tipo_splitter = int(request.POST['splitter'])
+    cor_fibra = request.POST['cor_fibra']
+    sinal_entrada = float(request.POST['sinal_in'])
+    descricao = request.POST['descicao']
+
+    print(f"{'****DADOS SALVOS*****': ^50}")
+    print(f"{'CTOP:':<15}{numeracao}")
+    print(f"{'Cor fibra:':<15}{cor_fibra}")
+    print(f"{'Splitter:':<15}1/{tipo_splitter}")
+    print(f"{'Sinal input:':<15}{sinal_entrada}")
+    print(f"{'Descrição:':<15}{descricao}")
+
+    splitter = Splitter.objects.get(id=tipo_splitter)
+
+    
+
+    if CtoPrimaria.objects.filter(numeracao = numeracao).exists():
+       return HttpResponse("Ctop ja cadastrada")
+    else:
+      splitter = Splitter.objects.get(id=tipo_splitter)    # pega o objeto do bando de dados Splitter e salva em splitter
+      ctop = CtoPrimaria(numeracao=numeracao,descricao= descricao,cor_fibra_entrada= cor_fibra,sinal_entrada=sinal_entrada,splitter=splitter)
+
+      ctop.save()
+ 
+ 
+
+  return HttpResponse(template.render(context, request)) # se não for post exiba a pagina sem alterações
+
