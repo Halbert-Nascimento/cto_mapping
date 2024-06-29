@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  
+  <meta charset="UTF-8">  
   <title>{% block title %}{% endblock %}</title>
+  <style>
+    a{
+      padding-right: 15px;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #3cd6eb;
+      text-decoration: none;
+      margin: 10px 5px;
+    }
+    nav{
+      border: 1px, solid, black;
+    }
+  </style>
 </head>
 <body>
   <header>
+    <nav>
+      <a href="{% url 'home' %}">Home pag </a>
+      <a href="{% url 'cadastro_splitter' %}">Splitter</a>
+      <a href="{% url 'cadastro_ctop' %}">CTO primaria</a>
+      <a href="{% url 'cadastro_ctos' %}">CTO secundaria</a>
+      <a href="http://192.168.10.33:4444/admin">admin</a>    
+    
+    </nav>      
+    </header>
 
 
   </header>

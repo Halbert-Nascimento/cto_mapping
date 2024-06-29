@@ -11,13 +11,21 @@
   <fieldset>
     <legend>Selecione o tipo do {{titulo_form}}:</legend>
     <p>
-      <label for="numeracao">Numeracao da CTOP:</label>
+      Devida da CTO'P: <br>
+      {% for ctop in ctops %}
+        <input type="radio" name="num_ctop" id="{{ctop.id}}" value="{{ctop.id}}" required> <label for="{{ctop.id}}">{{ctop.numeracao}} </label>
+
+      {% endfor %}
+    
+    </p>
+    <p>
+      <label for="numeracao">Numeracao da CTO:</label>
       <input type="number" name="numeracao" id="numeracao" required>
     </p>
 
     <p>
-      <label for="cor_fibra">Cor de entrada da fibra:</label>
-      <input type="text" name="cor_fibra" id="cor_fibra" required>
+      <label for="metragem">Metragem do cabeamento:</label>
+      <input type="text" name="metragem" id="metragem" required>
     </p>
 
     <p>
@@ -28,7 +36,6 @@
     <p>
       <span>Tipo do splitter: </span>
       <br>
-
       {% for splitter in splitters %}
         <input type="radio" name="splitter" id="{{splitter}}" value={{splitter.id}} checked><label for="{{splitter}}">{{splitter}}</label>
       {% endfor %}

@@ -41,9 +41,6 @@ class Cliente(models.Model):
 
 
 
-
-
-
 # Classe para CTO primaria, onde o pre-requisito e o cadastro da CTO primaria e splitter para definir a quantidade de saídas 'clientes' que ela pode ter.
 class CtoSecundaria(models.Model):
   numeracao = models.IntegerField() # Numero de identificacao da CTO secundaria

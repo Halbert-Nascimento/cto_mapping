@@ -114,4 +114,15 @@ def cadastro_ctoP(request):
 
 
 def cadastro_ctoS(request):
-  return
+  template = loader.get_template('CTO_manager/ctos_form.html')
+  splitters = Splitter.objects.all()
+  ctops = CtoPrimaria.objects.all()
+
+  context = {
+    'titulo' : 'CTOP form', # titulo da pagina
+    'titulo_form': 'CTO Primaria', # titulo para formulario
+    'splitters': splitters,
+    'ctops': ctops,
+    }
+  
+  return HttpResponse(template.render(context, request))
