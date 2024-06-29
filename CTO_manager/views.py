@@ -83,18 +83,16 @@ def cadastro_ctoP(request):
     tipo_splitter = int(request.POST['splitter'])
     cor_fibra = request.POST['cor_fibra']
     sinal_entrada = float(request.POST['sinal_in'])
-    descricao = request.POST['descicao']
+    descricao = request.POST['descricao']
 
     print(f"{'****DADOS SALVOS*****': ^50}")
     print(f"{'CTOP:':<15}{numeracao}")
     print(f"{'Cor fibra:':<15}{cor_fibra}")
-    print(f"{'Splitter:':<15}1/{tipo_splitter}")
+    print(f"{'Splitter id:':<15}{tipo_splitter}")
     print(f"{'Sinal input:':<15}{sinal_entrada}")
     print(f"{'Descrição:':<15}{descricao}")
 
-    splitter = Splitter.objects.get(id=tipo_splitter)
-
-    
+       
 
     if CtoPrimaria.objects.filter(numeracao = numeracao).exists(): # verifica se a numeração da cto ja existe
        messages.error(request,f"Cto Primaria {numeracao}' ja cadastrada no sistema!")
@@ -124,5 +122,41 @@ def cadastro_ctoS(request):
     'splitters': splitters,
     'ctops': ctops,
     }
+  
+  if request.method == 'POST':
+    numeracao_ctop = int(request.POST['num_ctop'])
+    numeracao = int(request.POST['numeracao'])
+    metragem = int(request.POST['metragem'])
+    sinal_entrada = float(request.POST['sinal_in'])
+    splitter_form = int(request.POST['splitter'])
+    descricao = request.POST['descricao']
+
+
+    print(f"{'****DADOS SALVOS*****': ^50}")
+    print(f"{'Derivação CTOP:':<15}{numeracao_ctop}")
+    print(f"{'CTO:':<15}{numeracao}")
+    print(f"{'Metragem:':<15}{metragem}")
+    print(f"{'Splitter id:':<15}{splitter_form}")
+    print(f"{'Sinal input:':<15}{sinal_entrada}")
+    print(f"{'Descrição:':<15}{descricao}")
+
+    if CtoSecundaria.objects.filter(numeracao=numeracao).exists():
+      messages.error(request, f"CTO {numeracao} ja existe!")
+
+      return redirect(cadastro_ctoS)
+
+    else:
+      ctop = CtoPrimaria.objects.get(id=numeracao_ctop)
+      splitter = Splitter.objects.get(id=splitter_form)
+
+      # upgrade implementar função no models e aqui para verificar a capacidade da ctop, se a
+      # capacidade d P pelo splitter tiver atingido não e possivel realizar a instalação da secundaria
+
+      #objects.create() é um atalho conveniente fornecido pelo Django para criar e salvar uma instância de modelo em uma única etapa.
+      cto = CtoSecundaria.objects.create(numeracao=numeracao, metragem=metragem, sinal_entrada=sinal_entrada, splitter=splitter, derivacao_ctoPrimaria=ctop, descricao=descricao) 
+
+      messages.success(request, f"CTO {numeracao} cadastrada com sucesso!")    
+    
+
   
   return HttpResponse(template.render(context, request))
