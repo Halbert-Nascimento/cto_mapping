@@ -9,7 +9,7 @@
 <form action="/ctomanager/ctos/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend>Selecione o tipo do {{titulo_form}}:</legend>
+    <legend>Selecione o tipo da {{titulo_form}}:</legend>
     <p>
       Devida da CTO'P: <br>
       {% for ctop in ctops %}

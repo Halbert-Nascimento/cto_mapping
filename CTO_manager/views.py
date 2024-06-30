@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 
 ## importando classes da models
-from .models import Splitter , CtoPrimaria, CtoSecundaria
+from .models import Splitter , CtoPrimaria, CtoSecundaria, Cliente
 
 
 
@@ -123,8 +123,8 @@ def cadastro_ctoS(request):
     'ctops': ctops,
     }
   
-  if request.method == 'POST':
-    numeracao_ctop = int(request.POST['num_ctop'])
+  if request.method == 'POST': # verifica se a requisição e posta para pegar os dados do formulario
+    numeracao_ctop = int(request.POST['num_ctop']) # pegando dados da numeração da cto do formulario
     numeracao = int(request.POST['numeracao'])
     metragem = int(request.POST['metragem'])
     sinal_entrada = float(request.POST['sinal_in'])
@@ -159,4 +159,37 @@ def cadastro_ctoS(request):
     
 
   
+  return HttpResponse(template.render(context, request))
+
+def instalacao(request):
+  template = loader.get_template('CTO_manager/instalacao.html')
+  ctos = CtoSecundaria.objects.all()
+  context = {
+    'titulo' : 'Instalação', # titulo da pagina
+    'ctos':ctos,
+  }
+
+  if request.method == 'POST':
+    nome = request.POST['nome']
+    rg = int(request.POST['rg'])
+    status = request.POST['status']
+    porta_cto = int(request.POST['porta'])
+    numeracao_cto = int(request.POST['numeracao_cto'])
+    metragem = float(request.POST['metragem'])
+
+    cto_secundaria = CtoSecundaria.objects.get(pk=numeracao_cto)
+
+    cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
+
+    CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+
+    #esta salvando mais que a capacidade da cto, verificar erro e arrumar
+
+
+
+
+    
+
+
+
   return HttpResponse(template.render(context, request))

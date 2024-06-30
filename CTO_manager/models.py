@@ -36,6 +36,8 @@ class Cliente(models.Model):
   numeracao_cto = models.IntegerField(blank=True, null=True) # deixar salva a numeracao da cto
   metragem = models.IntegerField(default=0) # tamanho do cabo que foi utilizado para instalacao
 
+  def __str__(self):
+     return f"{self.nome} esta instalado na CTO {self.numeracao_cto}, porta {self.porta}"
 
 
 
@@ -55,13 +57,15 @@ class CtoSecundaria(models.Model):
   # funcao para salvar o cliente e porta da cto, e definir o max de cliente que a cto aceita
   # recebe como parametro a instacia do cliente e a numeracao da porta 
   def adicionar_cliente(self, cliente, porta): # recebe instancia cliente , e numeracao da porta
-        if self.clientes.count() < self.splitter.tamanho: # verifica se a quantidade de cliente e menor que o tamanho do splitter, que e oque define a quantidade
+        if self.clientes.count() < self.splitter.splitter_tipo: # verifica se a quantidade de cliente e menor que o tamanho do splitter, que e oque define a quantidade
             cliente.porta = porta # salva a numeracao da porta na instancia do cliente.porta
             cliente.numeracao_cto = self.numeracao # salva a numeracao da cto na instancia do cliente.numeracao_cto
             cliente.save() # salva no banco de dados
             self.clientes.add(cliente) # adiciona a instancia do cliente a os clientes da cto
         else:
+            print("Cliente não salvo, atigindo capacidade maxima")
             raise ValueError(f"Limite de clientes atingido para esta CTO secundaria. max: {self.splitter}") # retonar um erro se tentar cadastrar mais cliente que a cto comporta
+
         
 
   # portas = models.ManyToManyField(Cliente, blank=True) # Este e o tipo de campo que define uma relacao de muitos-para-muitos com o modelo Cliente.
