@@ -63,7 +63,6 @@ class CtoSecundaria(models.Model):
             cliente.save() # salva no banco de dados
             self.clientes.add(cliente) # adiciona a instancia do cliente a os clientes da cto
         else:
-            print("Cliente não salvo, atigindo capacidade maxima")
             raise ValueError(f"Limite de clientes atingido para esta CTO secundaria. max: {self.splitter}") # retonar um erro se tentar cadastrar mais cliente que a cto comporta
 
         

@@ -183,6 +183,8 @@ def instalacao(request):
 
     CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
 
+    messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
+
     #esta salvando mais que a capacidade da cto, verificar erro e arrumar
 
 
