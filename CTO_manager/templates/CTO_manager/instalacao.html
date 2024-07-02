@@ -35,8 +35,10 @@
       <!-- <input type="number" name="porta" id="porta" min="1" max="16" required> -->
        <span>Numeração porta CTO:</span><br>
       {% for numero in range %}
-
       <input type="radio" name="porta" id="pt" value="{{numero}}" required><label for="porta" >{{numero}}</label>
+      {% if numero == 9 %}
+        <br>
+      {%endif%}
 
       {% endfor %}
     </p>

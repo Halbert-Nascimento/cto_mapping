@@ -11,6 +11,7 @@ from CTO_manager.models import Splitter , CtoPrimaria, CtoSecundaria, Cliente
 
 def pesquisa(request):
     template = loader.get_template('getData/pesquisa.html')
+    clientes = Cliente.objects.all()
     context = {
         'titulo': 'Pesquisa form'
     }
