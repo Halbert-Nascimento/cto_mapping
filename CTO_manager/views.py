@@ -167,6 +167,7 @@ def instalacao(request):
   context = {
     'titulo' : 'Instalação', # titulo da pagina
     'ctos':ctos,
+    'range': [1,2,3,4,5,6,7,8],
   }
 
   if request.method == 'POST':

@@ -31,13 +31,19 @@
     </p>
 
     <p>
-      <label for="porta">Numeração porta CTO:</label>
-      <input type="number" name="porta" id="porta" min="1" max="16" required>
+      <!-- <label for="porta">Numeração porta CTO:</label> -->
+      <!-- <input type="number" name="porta" id="porta" min="1" max="16" required> -->
+       <span>Numeração porta CTO:</span><br>
+      {% for numero in range %}
+
+      <input type="radio" name="porta" id="pt" value="{{numero}}" required><label for="porta" >{{numero}}</label>
+
+      {% endfor %}
     </p>
 
     <p>
       <span>Selecionar CTO:</span><br>
-      {% for cto in ctos%}
+      {% for cto in ctos %}
         <input type="radio" name="numeracao_cto" value="{{cto.id}}" id="{{cto.numeracao}}" required><label for="{{cto.numeracao}}">{{cto.numeracao}}</label>
       {% endfor %}
     </p>
