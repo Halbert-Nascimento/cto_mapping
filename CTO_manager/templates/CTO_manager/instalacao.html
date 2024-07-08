@@ -12,21 +12,21 @@
     <legend>Formulario de instalação de cliente:</legend>
     <p>
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome" required>
+      <input type="text" name="nome" id="nome" value="{{nome}}" required>
     </p>
 
     <p>
       <label for="rg">RG:</label>
-      <input type="number" name="rg", id="rg" placeholder="Somente numeros">
+      <input type="number" name="rg", id="rg"  value="{{rg}}" placeholder="Somente numeros">
     </p>
 
     <p>
       Status:<br>
-      <input type="radio" name="status" value="ATIVO" id="ativo" checked> 
+      <input type="radio" name="status" value="ATIVO" id="ativo" {% if status == 'ATIVO' %}checked{% endif %}> 
       <Label for="ativo">ATIVO</Label>
-      <input type="radio" name="status" value="CANCELADO" id="cancelado"> 
+      <input type="radio" name="status" value="CANCELADO" id="cancelado" {% if status == 'CANCELADO' %}checked{% endif %}> 
       <label for="cancelado">CANCELADO</label>
-      <input type="radio" name="status" value="BLOQUEADO" id="bloqueado"> 
+      <input type="radio" name="status" value="BLOQUEADO" id="bloqueado" {% if status == 'BLOQUEADO' %}checked{% endif %}> 
       <label for="bloqueado">BLOQUEADO</label>
     </p>
 
@@ -35,7 +35,7 @@
       <!-- <input type="number" name="porta" id="porta" min="1" max="16" required> -->
        <span>Numeração porta CTO:</span><br>
       {% for numero in range %}
-      <input type="radio" name="porta" id="pt" value="{{numero}}" required><label for="porta" >{{numero}}</label>
+      <input type="radio" name="porta" id="pt" value="{{numero}}" {% if porta == numero %}checked{% endif %}><label for="porta" >{{numero}}</label>
       {% if numero == 9 %}
         <br>
       {%endif%}
@@ -46,12 +46,17 @@
     <p>
       <span>Selecionar CTO:</span><br>
       {% for cto in ctos %}
-        <input type="radio" name="numeracao_cto" value="{{cto.id}}" id="{{cto.numeracao}}" required><label for="{{cto.numeracao}}">{{cto.numeracao}}</label>
+        <input type="radio" name="numeracao_cto" value="{{cto.id}}" id="{{cto.numeracao}}" required 
+        {% if numeracao_cto == cto.id %}        
+          checked
+        {% endif %}><label for="{{cto.numeracao}}">{{cto.numeracao}}</label>
       {% endfor %}
     </p>
+
     <p>
       <label for="metragem">Metragem:</label>
-      <input type="number" step="0.01" name="metragem" id="metragem" min="0" max="1000">
+      <input type="number" step="0.01" name="metragem" id="metragem" min="0" max="1000" value="{{ metragem }}">
+      {{metragem}}
     </p>
     
     

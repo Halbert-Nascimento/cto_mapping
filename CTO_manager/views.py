@@ -161,9 +161,11 @@ def cadastro_ctoS(request):
   
   return HttpResponse(template.render(context, request))
 
+
 def instalacao(request):
   template = loader.get_template('CTO_manager/instalacao.html')
   ctos = CtoSecundaria.objects.all()
+
   context = {
     'titulo' : 'Instalação', # titulo da pagina
     'ctos':ctos,
@@ -178,17 +180,26 @@ def instalacao(request):
     numeracao_cto = int(request.POST['numeracao_cto'])
     metragem = float(request.POST['metragem'])
 
-    cto_secundaria = CtoSecundaria.objects.get(pk=numeracao_cto)
+    if Cliente.objects.filter(nome = nome).exists() and Cliente.objects.filter(rg = rg).exists(): # verifica se o splitter ja existe no banco de dados
+      messages.error(request, f"{nome} ja esta cadastrado em nosso banco de dados!") # salva uma menagem d error temporaria para exibir que ja esta cadstrado o splitter 
+      # Preencha o formulário com os dados enviados
+      context['nome'] = nome
+      context['rg'] = rg
+      context['status'] = status
+      context['porta'] = porta_cto
+      context['numeracao_cto'] = numeracao_cto
+      context['metragem'] = metragem
+      
+    else:
+      cto_secundaria = CtoSecundaria.objects.get(pk=numeracao_cto)
 
-    cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
+      cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
 
-    CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+      CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
 
-    messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
+      messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
 
     #esta salvando mais que a capacidade da cto, verificar erro e arrumar
-
-
 
 
     

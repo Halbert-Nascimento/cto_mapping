@@ -53,6 +53,7 @@ class CtoSecundaria(models.Model):
   metragem = models.IntegerField(default=0) # tamanho do cabo que foi utilizado para instalacao
 
   clientes = models.ManyToManyField(Cliente, blank=True) # Este e o tipo de campo que define uma relacao de muitos-para-muitos com o modelo Cliente.
+  # total_clientes = clientes.count()
 
   # funcao para salvar o cliente e porta da cto, e definir o max de cliente que a cto aceita
   # recebe como parametro a instacia do cliente e a numeracao da porta 

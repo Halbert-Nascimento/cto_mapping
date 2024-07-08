@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>Cliente / CTO</h1>
+
+
+
+  <fieldset>
+    <legend>{{cto}}</legend>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>RG</th>
+        <th>Status</th>
+        <th>CTO</th>
+        <th>Porta</th>
+        <th>Metragem</th>
+      </tr>
+      
+        {% for cliente in clientes %}
+          <tr>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.rg}}</td>
+            <td>{{cliente.status}}</td>
+            <td>{{cliente.numeracao_cto}}</td>
+            <td>{{cliente.porta}}</td>
+            <td>{{cliente.metragem}}</td>
+          </tr>
+        {%endfor%}      
+    </table>
+   
+  </fieldset>
+
+  
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
+
+
+
+
+{% endblock %}

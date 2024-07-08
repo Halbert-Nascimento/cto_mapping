@@ -12,10 +12,41 @@ from CTO_manager.models import Splitter , CtoPrimaria, CtoSecundaria, Cliente
 def pesquisa(request):
     template = loader.get_template('getData/pesquisa.html')
     clientes = Cliente.objects.all()
+    ctops = CtoPrimaria.objects.all()
+    ctos= CtoSecundaria.objects.all()
     context = {
-        'titulo': 'Pesquisa form'
+        'titulo': 'Pesquisa form',
+        'clientes': clientes,
+        'ctops': ctops,
+        'ctos': ctos,
     }
+
+    for cto in ctos:
+        print(f"CTO: {cto.numeracao}, S: {cto.splitter}")
+
+        for cliente in cto.clientes.all():
+            print(f"Cliente: {cliente.nome}, {cto} porta {cliente.porta}")
     
+
+
+    return HttpResponse(template.render(context, request))
+
+
+def exibicao(request):
+    template = loader.get_template('getData/exibicao.html')
+    ctos = CtoSecundaria.objects.all()
+    cto =CtoSecundaria.objects.get(pk=1)
+
+    print(cto.clientes.all())
+
+    # for cto in ctos:
+    #     print(cto.pk)
+    context = {
+        'cto':cto,
+        'clientes':cto.clientes.all(),
+
+    }
+
 
 
     return HttpResponse(template.render(context, request))

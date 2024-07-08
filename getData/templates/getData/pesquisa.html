@@ -3,18 +3,88 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<h1>Pesquisa</h1>
+<h1>all</h1>
 
 
-<form action="/get/" method="post">
-  {% csrf_token  %}
+
   <fieldset>
-    <legend>{{titulo}}:</legend>
+    <legend>Clientes:</legend>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>RG</th>
+        <th>Status</th>
+        <th>CTO</th>
+        <th>Porta</th>
+        <th>Metragem</th>
+      </tr>
+      
+        {% for cliente in clientes %}
+          <tr>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.rg}}</td>
+            <td>{{cliente.status}}</td>
+            <td>{{cliente.numeracao_cto}}</td>
+            <td>{{cliente.porta}}</td>
+            <td>{{cliente.metragem}}</td>
+          </tr>
+        {%endfor%}      
+    </table>
+   
+  </fieldset>
 
-  
+  <fieldset>
+    <legend>CTOP's:</legend>
+    <table>
+      <tr>
+        <th>Numeração</th>
+        <th>Cor Fibra</th>
+        <th>Sinal in</th>
+        <th>Splitter</th>
+        <th>Descrição</th>
+        
+      </tr>
+      
+        {% for ctop in ctops %}
+          <tr>
+            <td>{{ctop.numeracao}}</td>
+            <td>{{ctop.cor_fibra_entrada}}</td>
+            <td>{{ctop.sinal_entrada}}</td>
+            <td>{{ctop.splitter}}</td>
+            <td>{{ctop.descricao}}</td>
+          </tr>
+        {%endfor%}      
+    </table>
+   
+  </fieldset>
 
-    
-    <br><button type="submit">Pesquisar</button>
+  <fieldset>
+    <legend>CTO's:</legend>
+    <table>
+      <tr>
+        <th>Numeração</th>
+        <th>Derivação</th>
+        <th>Sinal in</th>
+        <th>Splitter</th>
+        <th>Metragem</th>
+        <!-- <th>Total Clientes</th> -->
+        <th>Descrição</th>
+        
+      </tr>
+      
+        {% for cto in ctos %}
+          <tr>
+            <td>{{cto.numeracao}}</td>
+            <td>{{cto.derivacao_ctoPrimaria}}</td>
+            <td>{{cto.sinal_entrada}}</td>
+            <td>{{cto.splitter}}</td>
+            <td>{{cto.metragem}}</td>
+            <!-- <td>{{cto.total_clientes}}</td> -->
+            <td>{{cto.descricao}}</td>
+          </tr>
+        {%endfor%}      
+    </table>
+   
   </fieldset>
 
   {% if messages  %}
@@ -24,6 +94,6 @@
   {% endif %}
 
 
-</form>
+
 
 {% endblock %}
