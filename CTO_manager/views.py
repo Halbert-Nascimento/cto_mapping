@@ -156,11 +156,12 @@ def cadastro_ctoS(request):
   context = {
     'titulo' : 'CTOP form', # titulo da pagina
     'titulo_form': 'CTO Primaria', # titulo para formulario
-    'splitters': splitters,
-    'ctops': ctops,
+    'splitters': splitters, # QuerySet de todos os objetos Splitter
+    'ctops': ctops, # QuerySet de todos os objetos CtoPrimaria
     }
   
   if request.method == 'POST': # verifica se a requisição e posta para pegar os dados do formulario
+    # Processa os dados do formulário
     numeracao_ctop = int(request.POST['num_ctop']) # pegando dados da numeração da cto do formulario
     numeracao = int(request.POST['numeracao'])
     metragem = int(request.POST['metragem'])
@@ -177,12 +178,14 @@ def cadastro_ctoS(request):
     print(f"{'Sinal input:':<15}{sinal_entrada}")
     print(f"{'Descrição:':<15}{descricao}")
 
+    # Verifica se o CTO com a numeracao fornecida já existe
     if CtoSecundaria.objects.filter(numeracao=numeracao).exists():
       messages.error(request, f"CTO {numeracao} ja existe!")
 
       return redirect(cadastro_ctoS)
 
     else:
+      # Obtém as instâncias de CtoPrimaria e Splitter
       ctop = CtoPrimaria.objects.get(id=numeracao_ctop)
       splitter = Splitter.objects.get(id=splitter_form)
 
