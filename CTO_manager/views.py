@@ -112,6 +112,43 @@ def cadastro_ctoP(request):
 
 
 def cadastro_ctoS(request):
+  """
+  Função de visualização para lidar com o formulário de cadastro de CTO (Central Telefônica de Operação).
+
+    Args:
+        request (HttpRequest): O objeto de requisição HTTP contendo os dados do formulário.
+
+    Returns:
+        HttpResponse: Uma resposta contendo o template renderizado ou uma resposta de redirecionamento.
+
+    Notas:
+        - Esta função lida com requisições GET e POST.
+        - Se o método da requisição for POST, ela processa os dados do formulário e salva uma nova instância de CTO Secundaria.
+        - Se o CTO com a numeracao fornecida já existir, exibe uma mensagem de erro.
+        - Caso contrário, cria e salva um novo CTO Secundaria.
+        - A função também fornece dados de contexto para renderizar o template.
+
+    Campos do Formulário (esperados na requisição POST):
+        - 'num_ctop': ID da Derivação CTOP (CTO Primaria) (inteiro)
+        - 'numeracao': Numeracao do CTO (CTO Secundaria) (inteiro)
+        - 'metragem': Metragem (inteiro)
+        - 'sinal_in': Sinal de entrada (float)
+        - 'splitter': ID do Splitter (inteiro)
+        - 'descricao': Descrição (string)
+
+    Contexto do Template:
+        - 'titulo': Título da página
+        - 'titulo_form': Título para o formulário
+        - 'splitters': QuerySet de todos os objetos Splitter
+        - 'ctops': QuerySet de todos os objetos CtoPrimaria
+
+    Exemplo de Uso (no template):
+        {% for splitter in splitters %}
+            {{ splitter.id }}: {{ splitter.name }}
+        {% endfor %}  
+  """
+
+
   template = loader.get_template('CTO_manager/ctos_form.html')
   splitters = Splitter.objects.all()
   ctops = CtoPrimaria.objects.all()
