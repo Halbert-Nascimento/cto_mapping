@@ -50,3 +50,24 @@ def exibicao(request):
 
 
     return HttpResponse(template.render(context, request))
+
+
+def getCTO_P(request):
+  from CTO_manager.models import Cliente, CtoPrimaria, CtoSecundaria, Splitter
+
+  ctos = CtoPrimaria.objects.all()
+  cto = CtoSecundaria.objects.get(numeracao=1001)
+
+  portas = {}
+  clientes_associados = cto.clientes.all()
+
+  print(f"Cto {cto.numeracao} tem {cto.clientes.count()} clientes")
+  
+  for cliente in clientes_associados:
+    print(f"Porta: {cliente.porta} cliente {cliente.nome}, RG: {cliente.rg}")
+
+
+
+
+
+  return HttpResponse(f"Pagina de teste {cto}")
