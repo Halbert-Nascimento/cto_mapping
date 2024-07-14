@@ -213,6 +213,7 @@ def instalacao(request):
   }
 
   if request.method == 'POST':
+    # pegando as informações do formulario
     nome = request.POST['nome']
     rg = int(request.POST['rg'])
     status = request.POST['status']
@@ -220,30 +221,118 @@ def instalacao(request):
     numeracao_cto = int(request.POST['numeracao_cto'])
     metragem = float(request.POST['metragem'])
 
-    if Cliente.objects.filter(nome = nome).exists() and Cliente.objects.filter(rg = rg).exists(): # verifica se o splitter ja existe no banco de dados
+    # realizando o tratamento das informações
+    # verificar se o cliente ja existe no DB, verificando o nome e rg
+    if Cliente.objects.filter(rg = rg).exists(): # verifica se o splitter ja existe no banco de dados
       messages.error(request, f"{nome} ja esta cadastrado em nosso banco de dados!") # salva uma menagem d error temporaria para exibir que ja esta cadstrado o splitter 
-      # Preencha o formulário com os dados enviados
-      context['nome'] = nome
-      context['rg'] = rg
-      context['status'] = status
-      context['porta'] = porta_cto
-      context['numeracao_cto'] = numeracao_cto
-      context['metragem'] = metragem
+      
+      cliente = Cliente.objects.get(rg=rg)
+
+      return redirect(f'/ctomanager/atualizar_cliente/{cliente.pk}')
       
     else:
       cto_secundaria = CtoSecundaria.objects.get(pk=numeracao_cto)
 
       cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
 
+      #Nome da class. função adc_cliente(cto_secundaria que vai receber as informações, o cliente e a porta)
       CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
 
       messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
 
-    #esta salvando mais que a capacidade da cto, verificar erro e arrumar
-
-
-    
-
+    # esta salvando mais que a capacidade da cto, verificar erro e arrumar
 
 
   return HttpResponse(template.render(context, request))
+
+def atualizar_cliente(request, pk):
+  template = loader.get_template('CTO_manager/atualizar_cliente.html') ## carregando locla do arquivo html
+
+  cliente = Cliente.objects.get(pk=pk)
+  ctos = CtoSecundaria.objects.all()
+
+  context = {
+    'titulo' : 'Atualiza dados', # titulo da pagina
+    'ctos':ctos,
+    'range': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+    'nome': cliente.nome,
+    'rg': cliente.rg,
+    'cto': cliente.numeracao_cto,
+    'porta': cliente.porta,
+    'status': cliente.status,
+    'metragem': cliente.metragem,
+    'pk': cliente.pk,
+    
+  }
+
+  if request.method == 'POST':
+    rg = int(request.POST['rg'])    
+    nome = request.POST['nome']
+    status = request.POST['status']
+    porta = int(request.POST['porta'])
+    numeracao_cto = int(request.POST['numeracao_cto'])
+    metragem = float(request.POST['metragem'])
+
+
+    cliente.nome = nome
+    cliente.status = status 
+    cliente.numeracao_cto = numeracao_cto
+    cliente. porta = porta
+    cliente.metragem = metragem
+
+    cliente.save()
+    messages.success(request, 'Dados atualizados!')
+    return redirect(f'/ctomanager/atualizar_cliente/{cliente.pk}')
+
+
+
+
+
+  
+  return HttpResponse(template.render(context, request))
+
+
+def mudanca_endereco(request):
+  template = loader.get_template('CTO_manager/mudanca_endereco.html')
+  ctos = CtoSecundaria.objects.all()
+
+  context = {
+    'titulo' : 'Mudança endereço', # titulo da pagina
+    'ctos':ctos,
+    'range': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+  }
+  pk = request.GET.get('pk')
+  if pk:   # verifica se pk não e none
+    cliente = Cliente.objects.get(pk=pk)
+    context['nome'] = cliente.nome
+    context['rg'] = cliente.rg
+    context['status'] = cliente.status
+    context['porta'] = cliente.porta
+    context['numeracao_cto'] = cliente.numeracao_cto
+    print(cliente.numeracao_cto)
+    context['metragem'] = cliente.metragem
+
+  if request.method =="POST":
+    nome = request.POST['nome']
+    rg = int(request.POST['rg'])
+    status = request.POST['status']
+    porta_cto = int(request.POST['porta'])
+    numeracao_cto = int(request.POST['numeracao_cto'])
+    metragem = float(request.POST['metragem'])
+
+    cliente = Cliente.objects.get(rg=rg)
+    cliente.nome = nome
+    cliente.rg = rg
+    cliente.status = status
+    cliente.porta = porta_cto
+    cliente.numeracao_cto = numeracao_cto
+    cliente.metragem = metragem
+
+    cliente.save()
+
+      
+
+
+  return HttpResponse(template.render(context, request))
+
+

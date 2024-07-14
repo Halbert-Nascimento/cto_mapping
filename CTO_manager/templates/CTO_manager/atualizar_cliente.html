@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>Form Atualização de cliente</h1>
+<p>
+  Cliente {{nome}}, RG {{rg}}, esta instalado na cto {{cto}} porta {{porta}}, <strong> Status {{status}}</strong>
+</p>
+<p>
+  Atualize os dados e click em salvar 
+</p>
+
+
+<form action="/ctomanager/atualizar_cliente/{{pk}}/" method="post">
+  {% csrf_token  %}
+  <fieldset>
+    <legend>Formulario de atualização de cliente:</legend>
+    <p>
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" value="{{nome}}" required>
+    </p>
+
+    <p>
+      <label for="rg">RG:</label>
+      <input type="number" name="rg", id="rg"  value="{{rg}}" placeholder="Somente numeros">
+    </p>
+
+    <p>
+      Status:<br>
+      <input type="radio" name="status" value="ATIVO" id="ativo" {% if status == 'ATIVO' %}checked{% endif %}> 
+      <Label for="ativo">ATIVO</Label>
+      <input type="radio" name="status" value="CANCELADO" id="cancelado" {% if status == 'CANCELADO' %}checked{% endif %}> 
+      <label for="cancelado">CANCELADO</label>
+      <input type="radio" name="status" value="BLOQUEADO" id="bloqueado" {% if status == 'BLOQUEADO' %}checked{% endif %}> 
+      <label for="bloqueado">BLOQUEADO</label>
+    </p>
+
+    <p>
+      <!-- <label for="porta">Numeração porta CTO:</label> -->
+      <!-- <input type="number" name="porta" id="porta" min="1" max="16" required> -->
+       <span>Numeração porta CTO:</span><br>
+      {% for numero in range %}
+      <input type="radio" name="porta" id="pt" value="{{numero}}" {% if porta == numero %}checked{% endif %}><label for="porta" >{{numero}}</label>
+      {% if numero == 9 %}
+        <br>
+      {%endif%}
+
+      {% endfor %}
+    </p>
+
+    <p>
+      <span>Selecionar CTO:</span><br>
+      {% for cto in ctos %}
+        <input type="radio" name="numeracao_cto" value="{{cto.numeracao}}" id="{{cto.numeracao}}" required 
+        {% if numeracao_cto == cto.numeracao %}        
+          checked
+        {% endif %}><label for="{{cto.numeracao}}">{{cto.numeracao}}</label>
+      {% endfor %}
+    </p>
+
+    <p>
+      <label for="metragem">Metragem:</label>
+      <input type="number" step="0.01" name="metragem" id="metragem" min="0" max="1000" value="{{ metragem }}">
+      {{metragem}}
+    </p>
+    
+    
+    
+    <br><button type="submit">Salvar</button>
+  </fieldset>
+
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
+
+
+</form>
+
+{% endblock %}

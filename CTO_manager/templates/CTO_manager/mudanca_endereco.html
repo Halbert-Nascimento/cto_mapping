@@ -3,13 +3,13 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<h1>Form Instalação</h1>
-<p>Instalaçõa de clientes</p>
+<h1>Form Atualização Instalação</h1>
+<p>Atualização de clientes</p>
 
-<form action="/ctomanager/instalacao/" method="post">
+<form action="/ctomanager/atualizarendereco/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend>Formulario de instalação de cliente:</legend>
+    <legend>Formulario de atualização de cliente:</legend>
     <p>
       <label for="nome">Nome:</label>
       <input type="text" name="nome" id="nome" value="{{nome}}" required>
@@ -46,8 +46,8 @@
     <p>
       <span>Selecionar CTO:</span><br>
       {% for cto in ctos %}
-        <input type="radio" name="numeracao_cto" value="{{cto.pk}}" id="{{cto.numeracao}}" required 
-        {% if numeracao_cto == cto.id %}        
+        <input type="radio" name="numeracao_cto" value="{{cto.numeracao}}" id="{{cto.numeracao}}" required 
+        {% if numeracao_cto == cto.numeracao %}        
           checked
         {% endif %}><label for="{{cto.numeracao}}">{{cto.numeracao}}</label>
       {% endfor %}
@@ -61,7 +61,7 @@
     
     
     
-    <br><button type="submit">Salvar</button>
+    <br><button type="submit">Atualizar dados</button>
   </fieldset>
 
   {% if messages  %}

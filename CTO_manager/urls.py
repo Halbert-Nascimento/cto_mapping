@@ -7,4 +7,7 @@ urlpatterns = [
        path('ctop/',views.cadastro_ctoP, name='cadastro_ctop' ),
        path('ctos/',views.cadastro_ctoS, name='cadastro_ctos' ),
        path('instalacao/',views.instalacao, name='instalacao'),
+       path('atualizarendereco/', views.mudanca_endereco, name='atualizarendereco'),
+       path('atualizar_cliente/<int:pk>/', views.atualizar_cliente, name='atualizar_cliente'),
+       path('atualizar_cliente/<int:pk>/<int:cto>/', views.atualizar_cliente, name='atualizar_cliente'),
 ]
