@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>Pesquisar</h1>
+
+<form action="/get/pesquisa_ctoe/" method="get">
+  <label for="numeracao">Numeração:</label>
+  <input type="number" id="numeracao" name="numeracao">
+
+  
+
+  <br>
+  <input type="submit" value="pesquisar">
+</form>
+
+
+
+<fieldset>
+  <legend>CTO's:</legend>
+  <table>
+    <tr>
+      <th>Numeração</th>
+      <th>Derivação</th>
+      <th>Sinal in</th>
+      <th>Splitter</th>
+      <th>Metragem</th>
+      <!-- <th>Total Clientes</th> -->
+      <th>Descrição</th>
+      
+    </tr>
+    
+      {% for cto in ctos %}
+        <tr>
+          <td>{{cto.numeracao}}</td>
+          <td>{{cto.derivacao_ctoPrimaria}}</td>
+          <td>{{cto.sinal_entrada}}</td>
+          <td>{{cto.splitter}}</td>
+          <td>{{cto.metragem}}</td>
+          <td>{{cto.descricao}}</td>
+        </tr>
+      {%endfor%}      
+  </table>
+ 
+</fieldset>
+
+ 
+
+ 
+
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
+
+
+
+
+{% endblock %}

@@ -71,3 +71,30 @@ def getCTO_P(request):
 
 
   return HttpResponse(f"Pagina de teste {cto}")
+
+
+def pesquisa_cliente(request):
+      
+    template = loader.get_template('getData/pesquisa_cliente.html')
+    context ={
+       'titulo' : 'Pesquisa', # titulo da pagina
+    }
+    nome_filtrar = request.GET.get('nome')
+    
+
+    if nome_filtrar:
+        clientes = Cliente.objects.filter(nome__icontains = nome_filtrar)
+        #__icontains pesquisa se conteim no db pelo menos oque foi digitado
+    else:
+        clientes = Cliente.objects.all()
+
+    context['clientes']=clientes
+
+
+
+
+    return HttpResponse(template.render(context, request))
+
+
+def pesquisa_cto(request):
+    pass
