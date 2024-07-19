@@ -233,12 +233,26 @@ def instalacao(request):
     else:
       cto_secundaria = CtoSecundaria.objects.get(pk=numeracao_cto)
 
-      cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
+      if cto_secundaria.clientes.filter(porta = porta_cto).exists():
+        
+        context['nome'] = nome
+        context['rg'] = rg
+        context['status'] = status
+        context['numeracao_cto'] = numeracao_cto
+        context['metragem'] = metragem
+        
+        messages.warning(request, f"Porta {porta_cto} da CTO ocupada! Conferir porta!")
 
-      #Nome da class. função adc_cliente(cto_secundaria que vai receber as informações, o cliente e a porta)
-      CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+      else:
+        print(f"porta {porta_cto} livre, salvando cliente")
 
-      messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
+
+        cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
+
+        #Nome da class. função adc_cliente(cto_secundaria que vai receber as informações, o cliente e a porta)
+        CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+
+        messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
 
     # esta salvando mais que a capacidade da cto, verificar erro e arrumar
 

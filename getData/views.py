@@ -114,10 +114,14 @@ def info_cto(request, pk):
     template = loader.get_template('getData/info_cto.html')
 
     cto = CtoSecundaria.objects.get(pk=pk)
+    clientes = cto.clientes.all()
 
     context ={
         'titulo': f'CTO {cto.numeracao}',
         'cto': cto,
+        'clientes': clientes,
     }
+    print(clientes)
 
     return HttpResponse(template.render(context, request))
+
