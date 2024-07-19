@@ -275,32 +275,45 @@ def atualizar_cliente(request, pk):
     'porta': cliente.porta,
     'status': cliente.status,
     'metragem': cliente.metragem,
-    'pk': cliente.pk,
-    
+    'pk': cliente.pk,    
   }
+
+
 
   if request.method == 'POST':
     rg = int(request.POST['rg'])    
     nome = request.POST['nome']
     status = request.POST['status']
-    porta = int(request.POST['porta'])
+    porta_cto = int(request.POST['porta'])
     numeracao_cto = int(request.POST['numeracao_cto'])
     metragem = float(request.POST['metragem'])
 
 
-    cliente.nome = nome
-    cliente.status = status 
-    cliente.numeracao_cto = numeracao_cto
-    cliente. porta = porta
-    cliente.metragem = metragem
+    cto_secundaria = CtoSecundaria.objects.get(numeracao = numeracao_cto)
 
-    cliente.save()
-    messages.success(request, 'Dados atualizados!')
-    return redirect(f'/ctomanager/atualizar_cliente/{cliente.pk}')
+    
 
+    if cliente.porta != porta_cto and  cto_secundaria.clientes.filter(porta = porta_cto).exists():
+        
+      messages.warning(request, f"Porta {porta_cto} da CTO ocupada! Conferir porta!")
 
+    else:
+      if cliente.numeracao_cto != numeracao_cto:
+        cto_cliente = CtoSecundaria.objects.get(numeracao = cliente.numeracao_cto)
+        CtoSecundaria.remover_cliente(cto_cliente, cliente=cliente)
+        
+      CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
 
+      cliente.nome = nome
+      cliente.status = status 
+      cliente.numeracao_cto = numeracao_cto
+      cliente. porta = porta_cto
+      cliente.metragem = metragem
 
+      cliente.save()
+      messages.success(request, 'Dados atualizados!')
+
+      return redirect(f'/ctomanager/atualizar_cliente/{cliente.pk}')
 
   
   return HttpResponse(template.render(context, request))

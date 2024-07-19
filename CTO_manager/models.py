@@ -65,6 +65,9 @@ class CtoSecundaria(models.Model):
             self.clientes.add(cliente) # adiciona a instancia do cliente a os clientes da cto
         else:
             raise ValueError(f"Limite de clientes atingido para esta CTO secundaria. max: {self.splitter}") # retonar um erro se tentar cadastrar mais cliente que a cto comporta
+        
+  def remover_cliente(self, cliente):
+     self.clientes.remove(cliente)
 
         
 
