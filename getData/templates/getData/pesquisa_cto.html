@@ -3,13 +3,11 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<h1>Pesquisar CTO's</h1>
+<h1>Pesquisar CTO Secundaria</h1>
 
 <form action="/get/pesquisa_cto/" method="get">
-  <label for="numeracao">Numeração:</label>
-  <input type="number" id="numeracao" name="numeracao">
-
-  
+  <label for="numeracao">Numeração CTO's:</label>
+  <input type="number" id="numeracao" name="numeracao">  
 
   <br>
   <input type="submit" value="pesquisar">
@@ -54,8 +52,54 @@
  
 </fieldset>
 
- 
+<h1>Pesquisar CTO primaria</h1>
 
+<form action="/get/pesquisa_cto/" method="get">
+  <label for="numeracao">Numeração CTO'p:</label>
+  <input type="number" id="numeracao_p" name="numeracao_p">  
+
+  <br>
+  <input type="submit" value="pesquisar">
+</form>
+
+
+
+<fieldset>
+  <legend>CTOP's:</legend>
+  <style>
+    td{
+      border-bottom: 1px solid black;
+    }
+    
+  </style>
+  <table >
+    <tr>
+      <th>Numeração</th>
+      <th>Cor fibra entrada</th>
+      <th>Sinal in</th>
+      <th>Splitter</th>
+      
+      
+      <th>Descrição</th>
+      <th>Mais informações</th>
+      
+    </tr>
+    
+      {% for ctop in ctops %}
+        <tr>
+          <td>{{ctop.numeracao}}</td>
+          <td>{{ctop.cor_fibra_entrada}}</td>
+          <td>{{ctop.sinal_entrada}}</td>
+          <td>{{ctop.splitter}}</td>
+          
+          <td>{{ctop.descricao}}</td>
+          <!-- <td><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td> -->
+          
+        </tr>
+      {%endfor%}      
+  </table>
+ 
+</fieldset>
  
 
   {% if messages  %}

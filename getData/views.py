@@ -98,12 +98,20 @@ def pesquisa_cto(request):
         'titulo': 'Pesquisar cto',
     }
     numeracao_filtrar = request.GET.get('numeracao')
+    numeracao_filtrar_p = request.GET.get('numeracao_p')
+
     if numeracao_filtrar:
         ctos = CtoSecundaria.objects.filter(numeracao__icontains = numeracao_filtrar)
     else:
         ctos = CtoSecundaria.objects.all()
 
+    if numeracao_filtrar_p:
+        ctops = CtoPrimaria.objects.filter(numeracao__icontains = numeracao_filtrar_p)
+    else:
+        ctops = CtoPrimaria.objects.all()
+
     context['ctos']=ctos
+    context['ctops']=ctops
 
 
 

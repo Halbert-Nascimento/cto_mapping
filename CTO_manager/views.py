@@ -219,7 +219,7 @@ def instalacao(request):
     status = request.POST['status']
     porta_cto = int(request.POST['porta'])
     numeracao_cto = int(request.POST['numeracao_cto'])
-    metragem = float(request.POST['metragem'])
+    metragem = request.POST['metragem']
 
     # realizando o tratamento das informações
     # verificar se o cliente ja existe no DB, verificando o nome e rg

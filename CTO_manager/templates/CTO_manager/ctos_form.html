@@ -12,6 +12,11 @@
     <legend>Selecione o tipo da {{titulo_form}}:</legend>
     <p>
       Devida da CTO'P: <br>
+      {% if not ctops %}
+
+        <p style="color: red;">CADASTRAR CTO'P ANTES</p>
+
+      {% endif %}
       {% for ctop in ctops %}
         <input type="radio" name="num_ctop" id="{{ctop.id}}" value="{{ctop.id}}" required> <label for="{{ctop.id}}">{{ctop.numeracao}} </label>
 
@@ -36,6 +41,11 @@
     <p>
       <span>Tipo do splitter: </span>
       <br>
+      {% if not splitters %}
+
+        <p style="color: red;">Cadastrar splitter antes</p>
+
+      {% endif %}
       {% for splitter in splitters %}
         <input type="radio" name="splitter" id="{{splitter}}" value={{splitter.id}} checked><label for="{{splitter}}">{{splitter}}</label>
       {% endfor %}

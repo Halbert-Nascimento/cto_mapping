@@ -29,6 +29,12 @@
       <span>Tipo do splitter: </span>
       <br>
 
+      {% if not splitters %}
+
+      <p style="color: red;">Cadastrar splitter antes</p>
+
+      {% endif %}
+
       {% for splitter in splitters %}
         <input type="radio" name="splitter" id="{{splitter}}" value={{splitter.id}} checked><label for="{{splitter}}">{{splitter}}</label>
       {% endfor %}
