@@ -79,8 +79,7 @@ def pesquisa_cliente(request):
     context ={
        'titulo' : 'Pesquisa', # titulo da pagina
     }
-    nome_filtrar = request.GET.get('nome')
-    
+    nome_filtrar = request.GET.get('nome')    
 
     if nome_filtrar:
         clientes = Cliente.objects.filter(nome__icontains = nome_filtrar)
@@ -90,11 +89,35 @@ def pesquisa_cliente(request):
 
     context['clientes']=clientes
 
+    return HttpResponse(template.render(context, request))
+
+
+def pesquisa_cto(request):
+    template = loader.get_template('getData/pesquisa_cto.html')
+    context ={
+        'titulo': 'Pesquisar cto',
+    }
+    numeracao_filtrar = request.GET.get('numeracao')
+    if numeracao_filtrar:
+        ctos = CtoSecundaria.objects.filter(numeracao__icontains = numeracao_filtrar)
+    else:
+        ctos = CtoSecundaria.objects.all()
+
+    context['ctos']=ctos
 
 
 
     return HttpResponse(template.render(context, request))
 
 
-def pesquisa_cto(request):
-    pass
+def info_cto(request, pk):
+    template = loader.get_template('getData/info_cto.html')
+
+    cto = CtoSecundaria.objects.get(pk=pk)
+
+    context ={
+        'titulo': f'CTO {cto.numeracao}',
+        'cto': cto,
+    }
+
+    return HttpResponse(template.render(context, request))

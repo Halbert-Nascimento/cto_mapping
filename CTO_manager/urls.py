@@ -9,5 +9,5 @@ urlpatterns = [
        path('instalacao/',views.instalacao, name='instalacao'),
        path('atualizarendereco/', views.mudanca_endereco, name='atualizarendereco'),
        path('atualizar_cliente/<int:pk>/', views.atualizar_cliente, name='atualizar_cliente'),
-       path('atualizar_cliente/<int:pk>/<int:cto>/', views.atualizar_cliente, name='atualizar_cliente'),
+       
 ]

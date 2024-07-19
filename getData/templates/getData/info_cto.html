@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} {{titulo}} {% endblock %}
+
+{% block content %}
+<h1>CTO {{cto.numeracao}}</h1>
+
+
+
+
+
+<fieldset>
+  <legend>Clientes cto</legend>
+ 
+</fieldset>
+
+ 
+
+ 
+
+  {% if messages  %}
+    {% for message in messages %}
+    <p> {{message}} </p>
+    {% endfor %}
+  {% endif %}
+
+
+
+
+{% endblock %}

@@ -3,9 +3,9 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<h1>Pesquisar</h1>
+<h1>Pesquisar CTO's</h1>
 
-<form action="/get/pesquisa_ctoe/" method="get">
+<form action="/get/pesquisa_cto/" method="get">
   <label for="numeracao">Numeração:</label>
   <input type="number" id="numeracao" name="numeracao">
 
@@ -19,7 +19,13 @@
 
 <fieldset>
   <legend>CTO's:</legend>
-  <table>
+  <style>
+    td{
+      border-bottom: 1px solid black;
+    }
+    
+  </style>
+  <table >
     <tr>
       <th>Numeração</th>
       <th>Derivação</th>
@@ -28,6 +34,7 @@
       <th>Metragem</th>
       <!-- <th>Total Clientes</th> -->
       <th>Descrição</th>
+      <th>Mais informações</th>
       
     </tr>
     
@@ -39,6 +46,8 @@
           <td>{{cto.splitter}}</td>
           <td>{{cto.metragem}}</td>
           <td>{{cto.descricao}}</td>
+          <td><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td>
+          
         </tr>
       {%endfor%}      
   </table>
