@@ -1,50 +1,77 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_menu.css' %}">
+  <script src="{% static 'js/js_menu.js' %}" defer></script>
+  
   <title>{% block title %}{% endblock %}</title>
-  <style>
-    a{
-      padding-right: 15px;
-      display: inline-block;
-      text-transform: uppercase;
-      color: #3cd6eb;
-      text-decoration: none;
-      margin: 10px 5px;
-    }
-    nav{
-      border: 1px, solid, black;
-    }
-  </style>
+  
 </head>
 <body>
   <header>
-    <nav>
-      <a href="{% url 'home' %}">Home pag </a>
-      <a href="{% url 'cadastro_splitter' %}">Splitter</a>
-      <a href="{% url 'cadastro_ctop' %}">CTO primaria</a>
-      <a href="{% url 'cadastro_ctos' %}">CTO secundaria</a>
-      <a href="{% url 'instalacao' %}">Instalação</a> 
-      <a href="{% url 'pesquisa' %}">Query all</a>
-      <a href="{% url 'pesquisa_cliente' %}">Pesquisar Cliente</a>
-      <a href="{% url 'pesquisa_cto' %}">Pesquisar CTOs</a>
-      <!-- <a href="http://192.168.10.33:4444/admin">admin</a> -->
-    
-    </nav>      
-    </header>
+    <div class="header_menu">
 
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>    
+
+      
+
+      <div class="logo"><a href="{% url 'home' %}"><img class="logo-svg" src="{% static 'icons/connection_engine_internet_icon.svg'%}" alt=""></a></div>
+
+      <div class="header-bem-vindo">Bem vindo, <strong>Visitante!</strong> </div>
+      
+      <div class="nav-icons">
+        <a href=""> <img class="icon-svg" src="{% static 'icons/search-clients.svg'%}"></a>
+        <a href=""> <img class="icon-svg" src="{% static 'icons/notification-danger.svg'%}"></a>
+        <a href=""> <img class="icon-svg" src="{% static 'icons/sign_in_light_icon.svg'%}"></a>
+      </div>      
+
+    </div>
+
+    <span id="espaço_header_nav"></span>
+
+
+    <nav class="navbar">
+         
+
+      
+      <ul class="nav-links ">
+        <li><a class="" href="{% url 'cadastro_splitter' %}">Splitter</a></li>
+        <li><a class="" href="{% url 'cadastro_ctop' %}">CTO'P</a></li>
+        <li><a class="" href="{% url 'cadastro_ctos' %}">CTO'S</a></li>
+        <li><a class="" href="{% url 'instalacao' %}">Instalação</a> </li>
+        <li><a class="" href="{% url 'pesquisa' %}">Query all</a></li>
+        <li><a class="" href="{% url 'pesquisa_cliente' %}">Pesquisar Cliente</a></li>
+        <li><a class="" href="{% url 'pesquisa_cto' %}">Pesquisar CTOs</a></li>       
+      </ul>
+      
+
+    </nav> 
 
   </header>
 
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
 
-<footer>
   
-</footer>
 
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  
+  <footer>
+    <p>      
+      <a href="{% url 'sobre' %}">Sobre</a>
+    </p> 
+  </footer>
+  
   
 </body>
 </html>
+

@@ -12,3 +12,14 @@ def home(request):
     }
 
   return HttpResponse(template.render(context, request))
+
+
+def sobre(request):
+
+  template = loader.get_template('app_home/sobre.html')
+  context = {
+        
+    }
+
+  return HttpResponse(template.render(context, request))
+
