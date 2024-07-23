@@ -1,0 +1,55 @@
+.sobre h1, h2, h3,h4,h5,h6{
+  text-align: center;
+  
+  
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+}
+
+.sobre h1{
+  padding-top: 20px;
+  font-size: 25px;
+}
+.sobre h2{
+  font-size: 22px;
+}
+.sobre h3{
+  font-size: 20px;
+}
+.sobre p{
+  margin-bottom: 10px;
+}
+
+.sobre p, li{
+  text-align: justify;
+  letter-spacing: 1px;
+  
+}
+.sobre li{
+ 
+  position: relative;
+  padding-left: 25px; /* Espaço para a seta */
+  margin-bottom: 10px; /* Espaço entre os itens */
+ 
+}
+.sobre li::before {
+  content: '\2192'; /* Unicode para a seta direita */
+  position: absolute;
+  left: 0;
+  top: -5px;
+  color: #333; /* Cor da seta */
+  font-size: 20px; /* Tamanho da seta */
+  line-height: 1; /* Alinhamento vertical */
+  
+  
+}
+.sobre {
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+.sobre .destaque{
+  color: #971c1c;
+  font-weight: bold;
+
+}

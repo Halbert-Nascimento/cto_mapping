@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="{% static 'css/style_menu.css' %}">
   <script src="{% static 'js/js_menu.js' %}" defer></script>
   
+  
   <title>{% block title %}{% endblock %}</title>
+  {% block extra_head %}{% endblock %}
   
 </head>
 <body>
@@ -65,11 +67,7 @@
       {% endblock %}
     </main>
   
-  <footer>
-    <p>      
-      <a href="{% url 'sobre' %}">Sobre</a>
-    </p> 
-  </footer>
+
   
   
 </body>
