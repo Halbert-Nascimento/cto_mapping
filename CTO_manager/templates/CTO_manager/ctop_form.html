@@ -19,8 +19,24 @@
     </p>
 
     <p>
-      <label for="cor_fibra">Cor de entrada da fibra:</label>
-      <input type="text" name="cor_fibra" id="cor_fibra" required>
+      <label for="cor_fibra">Cor/Código fibra:</label>
+      <select name="cor_fibra" id="cor_fibra">
+        <option value="Verde/1">Verde/1</option>
+        <option value="Amarelo/2">Amarelo/2</option>
+        <option value="Branco/3">Branco/3</option>
+        <option value="Azul/4">Azul/4</option>
+        <option value="Vermelho/5">Vermelho/5</option>
+        <option value="Violeta/6">Violeta/6</option>
+        <option value="Marrom/7">Marrom/7</option>
+        <option value="Rosa/8">Rosa/8</option>
+        <option value="Preto/9">Preto/9</option>
+        <option value="Cinza/10">Cinza/10</option>
+        <option value="Laranja/11">Laranja/11</option>
+        <option value="Aqua/12">Aqua/12</option>
+
+
+      </select>
+      <!-- <input type="text" name="cor_fibra" id="cor_fibra" required> -->
     </p>
 
     <p>
@@ -54,15 +70,15 @@
       
     </p>
     
-    <br><button class="submit" type="submit">Salvar</button>
+    <button class="submit" type="submit">Salvar</button>
   </fieldset>
 
   {% if messages  %}
-  <div class="messages">
     {% for message in messages %}
-    <p> {{message}} </p>
-    {% endfor %}
-  </div>
+      <div  class=" messages {% if message.tags %}{{ message.tags }}{% endif %}" >
+        <p>{{message}} </p>
+      </div>
+      {% endfor %}
   {% endif %}
 
 

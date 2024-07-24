@@ -4,69 +4,80 @@
 
 {% block content %}
 <section class="main">
-<h1>Form CTO'S</h1>
-<p>Cadastro CTO ssecundaria</p>
+<h1 class="titulo">Form CTO'S</h1>
+<p class="informacao">Cadastro CTO secundaria</p>
 
-<form action="/ctomanager/ctos/" method="post">
+<form class="formulario" action="/ctomanager/ctos/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend>Selecione o tipo da {{titulo_form}}:</legend>
+    <legend class="legenda">Selecione o tipo da {{titulo_form}}:</legend>
+    <span class="linha_media"></span>
     <p>
-      Devida da CTO'P: <br>
+      Devida da CTO'P: 
+
+      
+      <select name="num_ctop" id="opcoes_ctop">
+        {% for ctop in ctops %}
+        <option value="{{ctop.id}}">{{ctop.numeracao}}</option>
+        {% endfor %}
+      </select>
+      
       {% if not ctops %}
-
-        <p style="color: red;">CADASTRAR CTO'P ANTES</p>
-
+        <p class="atencao-null">CADASTRAR CTO'P ANTES</p>
       {% endif %}
-      {% for ctop in ctops %}
-        <input type="radio" name="num_ctop" id="{{ctop.id}}" value="{{ctop.id}}" required> <label for="{{ctop.id}}">{{ctop.numeracao}} </label>
-
-      {% endfor %}
-    
     </p>
     <p>
-      <label for="numeracao">Numeracao da CTO:</label>
+      <label class="label" for="numeracao">Numeracao da CTO:</label>
       <input type="number" name="numeracao" id="numeracao" required>
     </p>
 
     <p>
-      <label for="metragem">Metragem do cabeamento:</label>
+      <label class="label" for="metragem">Metragem do cabeamento:</label>
       <input type="number" name="metragem" id="metragem" required>
     </p>
 
     <p>
-      <label for="sinal_in">Sinal de entrada:</label>
+      <label class="label" for="sinal_in">Sinal de entrada:</label>
       <input type="number" step="0.01" name="sinal_in" id="sinal_in">
     </p>
 
     <p>
-      <span>Tipo do splitter: </span>
+      <span class="legenda_info">Tipo do splitter: </span>
       <br>
+
       {% if not splitters %}
-
-        <p style="color: red;">Cadastrar splitter antes</p>
-
+      <p class="atencao-null">Cadastrar splitter antes</p>
       {% endif %}
+
+
+      <label class="label" for="{{splitter}}">Selecione splitter:</label>
+
+      <select name="splitter" id="opcoes">
       {% for splitter in splitters %}
-        <input type="radio" name="splitter" id="{{splitter}}" value={{splitter.id}} checked><label for="{{splitter}}">{{splitter}}</label>
+        <option name="splitter" value="{{splitter.id}}">{{splitter}}</option>    
+        
       {% endfor %}
+      </select>
 
     </p>
 
     <p>
-      <label for="descricao">Descrição:</label><br>
+      <label class="label" for="legenda_info">Descrição:</label><br>
       <textarea name="descricao" id="descricao" rows="6" cols="30"></textarea>
       
     </p>
     
-    <br><button type="submit">Salvar</button>
+    <button class="submit" type="submit">Salvar</button>
   </fieldset>
 
   {% if messages  %}
     {% for message in messages %}
-    <p> {{message}} </p>
-    {% endfor %}
+      <div  class=" messages {% if message.tags %}{{ message.tags }}{% endif %}" >
+        <p>{{message}} </p>
+      </div>
+      {% endfor %}
   {% endif %}
+
 
 
 </form>

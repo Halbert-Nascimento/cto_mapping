@@ -95,7 +95,7 @@ def cadastro_ctoP(request):
        
 
     if CtoPrimaria.objects.filter(numeracao = numeracao).exists(): # verifica se a numeração da cto ja existe
-       messages.error(request,f"Cto Primaria {numeracao}' ja cadastrada no sistema!")
+       messages.error(request,f"Cto Primaria '{numeracao}' ja cadastrada no sistema!")
 
       
        return redirect(cadastro_ctoP)

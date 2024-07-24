@@ -61,22 +61,7 @@
 }
 
 
-.messages{
 
-  margin: 20px auto;
-  width: 250px;
-  border-radius: 10px;
-  background: linear-gradient(to top, #eec3022a, #fbff0065);
-  text-align: justify;
-  
-  padding: 10px;
-}
-.messages p{
-  color: #633a06;
-  font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: 0.8px;
-}
 
 .legenda_info{
   font-weight: bold;
@@ -101,5 +86,41 @@
 }
 .atencao-null{
   color: red;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+.formulario select{
+  margin: 10px 0;
+}
+
+.messages{
+
+  margin: 20px auto;
+  width: 250px;
+  border-radius: 10px;
+  /* background: linear-gradient(to top, #eec3022a, #fbff0065); */
+  text-align: justify;   
+  padding: 10px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+.success {
+  color: #0b3a04;
+  border: 3px solid #1fff01;
+  background: linear-gradient(to top, #2dff0398, #ffd9009f);
+}
+.error { 
+  color: #ff0000;
+  border: 3px solid #ff011a;
+  background: linear-gradient(to top, #eaee02, #ffd9009f);  
+
+}
+.warning{
+  color: #614003;
+  border: 3px solid #fffb01;
+  background: linear-gradient(to top, #eaee02b7, #f0d01b67); 
 
 }
