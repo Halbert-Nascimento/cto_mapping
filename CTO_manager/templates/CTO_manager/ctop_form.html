@@ -3,15 +3,18 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<h1>Form CTO'P</h1>
-<p>Cadastro CTO primaria</p>
+<section class="main">
+<h1 class="titulo">Form CTO'P</h1>
+<p class="informacao">Cadastro CTO primaria</p>
 
-<form action="/ctomanager/ctop/" method="post">
+<form class="formulario" action="/ctomanager/ctop/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend>Selecione o tipo do {{titulo_form}}:</legend>
+    <legend class="legenda">Selecione o tipo do {{titulo_form}}:</legend>
+    <span class="linha_media"></span>
+
     <p>
-      <label for="numeracao">Numeracao da CTOP:</label>
+      <label class="label" for="numeracao">Numeracao da CTOP:</label>
       <input type="number" name="numeracao" id="numeracao" required>
     </p>
 
@@ -26,37 +29,46 @@
     </p>
 
     <p>
-      <span>Tipo do splitter: </span>
+      <span class="legenda_info">Tipo do splitter: </span>
       <br>
 
       {% if not splitters %}
-
-      <p style="color: red;">Cadastrar splitter antes</p>
-
+      <p class="atencao-null">Cadastrar splitter antes</p>
       {% endif %}
 
+
+      <label for="{{splitter}}">Selecione splitter:</label>
+
+      <select name="splitter" id="opcoes">
       {% for splitter in splitters %}
-        <input type="radio" name="splitter" id="{{splitter}}" value={{splitter.id}} checked><label for="{{splitter}}">{{splitter}}</label>
+        <option name="splitter" value="{{splitter.id}}">{{splitter}}</option>    
+        
       {% endfor %}
+      </select>
 
     </p>
 
     <p>
-      <label for="descricao">Descrição:</label><br>
+      <label class="legenda_info" for="descricao">Descrição:</label><br>
       <textarea name="descricao" id="descricao" rows="6" cols="30"></textarea>
       
     </p>
     
-    <br><button type="submit">Salvar</button>
+    <br><button class="submit" type="submit">Salvar</button>
   </fieldset>
 
   {% if messages  %}
+  <div class="messages">
     {% for message in messages %}
     <p> {{message}} </p>
     {% endfor %}
+  </div>
   {% endif %}
 
 
 </form>
+</section>
+
+
 
 {% endblock %}

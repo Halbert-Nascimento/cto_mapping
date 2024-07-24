@@ -33,7 +33,7 @@ def cadastro_splitter(request):
     print(f"Spliter selecionado: 1/{splitter_form}") # degub exibir no console
 
     if Splitter.objects.filter(splitter_tipo = splitter_form).exists(): # verifica se o splitter ja existe no banco de dados
-      messages.error(request, f"Splitter 1/{splitter_form} ja esta cadastrado em nosso banco de dados!") # salva uma menagem d error temporaria para exibir que ja esta cadstrado o splitter 
+      messages.error(request, f"Splitter 1/{splitter_form} ja esta cadastrado em nosso sistema!") # salva uma menagem d error temporaria para exibir que ja esta cadstrado o splitter 
       
     
     else:
