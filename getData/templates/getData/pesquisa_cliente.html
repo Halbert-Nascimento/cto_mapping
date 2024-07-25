@@ -3,23 +3,24 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<section class="full">
+<section class="full ">
 <h1>Pesquisar</h1>
 
-<form action="/get/pesquisa_cliente/" method="get">
+<form class="formulario" action="/get/pesquisa_cliente/" method="get">
+
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
 
   
 
-  <br>
-  <input type="submit" value="pesquisar">
+
+  <input class="submit" type="submit" value="pesquisar">
 </form>
 
 
 
-  <fieldset>
-    <legend>Clientes:</legend>
+  <fieldset class="pesquisa">
+    <legend class="legenda_pesquisa">Clientes:</legend>
     <table>
       <tr>
         <th>Nome</th>
@@ -31,8 +32,8 @@
       </tr>
       
         {% for cliente in clientes %}
-          <tr>
-            <td>{{cliente.nome}}</td>
+          <tr class="tr">
+            <td class="td_nome">{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>
             <td>{{cliente.status}}</td>
             <td>{{cliente.numeracao_cto}}</td>

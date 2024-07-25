@@ -5,37 +5,33 @@
 {% block content %}
 <section class="main">
 
-<h1>Form Atualização de cliente</h1>
-<p>
+<h1 class="titulo">Form Atualização de cliente</h1>
+<p class="informacao">
   Cliente {{nome}}, RG {{rg}}, esta instalado na cto {{cto}} porta {{porta}}, <strong> Status {{status}}</strong>
 </p>
-<p>
-  Atualize os dados e click em salvar 
-</p>
 
 
-<form action="/ctomanager/atualizar_cliente/{{pk}}/" method="post">
+<form class="formulario" action="/ctomanager/atualizar_cliente/{{pk}}/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend>Formulario de atualização de cliente:</legend>
+    <legend class="legenda">Formulario de atualização de cliente:</legend>
     <p>
-      <label for="nome">Nome:</label>
+      <label for="nome">Nome:</label><br>
       <input type="text" name="nome" id="nome" value="{{nome}}" required>
     </p>
 
     <p>
-      <label for="rg">RG:</label>
+      <label for="rg">RG:</label><br>
       <input type="number" name="rg", id="rg"  value="{{rg}}" placeholder="Somente numeros">
     </p>
 
     <p>
-      Status:<br>
-      <input type="radio" name="status" value="ATIVO" id="ativo" {% if status == 'ATIVO' %}checked{% endif %}> 
-      <Label for="ativo">ATIVO</Label>
-      <input type="radio" name="status" value="CANCELADO" id="cancelado" {% if status == 'CANCELADO' %}checked{% endif %}> 
-      <label for="cancelado">CANCELADO</label>
-      <input type="radio" name="status" value="BLOQUEADO" id="bloqueado" {% if status == 'BLOQUEADO' %}checked{% endif %}> 
-      <label for="bloqueado">BLOQUEADO</label>
+      <label for="status">Status: </label>
+      <select name="status" id="status">
+        <option value="ATIVO"{% if status == 'ATIVO' %}selected {% endif %} >Ativo</option>
+        <option value="CANCELADO" {% if status == 'CANCELADO' %}selected {% endif %}>Cancelado</option>
+        <option value="BLOQUEADO" {% if status == 'BLOQUEADO' %}selected {% endif %}>Bloqueado</option>
+      </select>
     </p>
 
     <p>
@@ -52,13 +48,15 @@
     </p>
 
     <p>
-      <span>Selecionar CTO:</span><br>
-      {% for cto in ctos %}
-        <input type="radio" name="numeracao_cto" value="{{cto.numeracao}}" id="{{cto.numeracao}}" required 
-        {% if numeracao_cto == cto.numeracao %}        
-          checked
-        {% endif %}><label for="{{cto.numeracao}}">{{cto.numeracao}}</label>
-      {% endfor %}
+      <label for="numeracao_cto">Selecionar CTO:</label>
+      <select name="numeracao_cto" id="numeracao_cto">
+        {% for cto in ctos %}
+        
+        <option value="{{cto.pk}}" {% if cto_cliente == cto.numeracao %} selected {% endif %}>{{cto.numeracao}}</option>
+
+        {% endfor %}
+        
+      </select>
     </p>
 
     <p>
@@ -69,17 +67,16 @@
     
     
     
-    <br><button type="submit">Salvar</button>
+    <button class="submit" type="submit">Salvar</button>
   </fieldset>
 
   {% if messages  %}
-  <div class="messages">
     {% for message in messages %}
-    <p> {{message}} </p>
-    {% endfor %}
-  </div>
+      <div  class=" messages {% if message.tags %}{{ message.tags }}{% endif %}" >
+        <p>{{message}} </p>
+      </div>
+      {% endfor %}
   {% endif %}
-
 
 </form>
 </section>

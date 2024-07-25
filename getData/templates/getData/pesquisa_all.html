@@ -3,12 +3,12 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<section class="full">
-<h1>all</h1>
+<section class="full centralizar_main">
+<h1 class="titulo" >Todos</h1>
 
 
 
-  <fieldset>
+  <fieldset class="pesquisa">
     <legend>Clientes:</legend>
     <table>
       <tr>
@@ -21,7 +21,7 @@
       </tr>
       
         {% for cliente in clientes %}
-          <tr>
+          <tr class="tr centralizar">
             <td>{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>
             <td>{{cliente.status}}</td>
@@ -34,7 +34,7 @@
    
   </fieldset>
 
-  <fieldset>
+  <fieldset class="pesquisa">
     <legend>CTOP's:</legend>
     <table>
       <tr>
@@ -47,7 +47,7 @@
       </tr>
       
         {% for ctop in ctops %}
-          <tr>
+          <tr class="tr centralizar">
             <td>{{ctop.numeracao}}</td>
             <td>{{ctop.cor_fibra_entrada}}</td>
             <td>{{ctop.sinal_entrada}}</td>
@@ -59,7 +59,7 @@
    
   </fieldset>
 
-  <fieldset>
+  <fieldset class="pesquisa">
     <legend>CTO's:</legend>
     <table>
       <tr>
@@ -74,7 +74,7 @@
       </tr>
       
         {% for cto in ctos %}
-          <tr>
+          <tr class="tr centralizar">
             <td>{{cto.numeracao}}</td>
             <td>{{cto.derivacao_ctoPrimaria}}</td>
             <td>{{cto.sinal_entrada}}</td>

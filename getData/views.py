@@ -10,7 +10,7 @@ from CTO_manager.models import Splitter , CtoPrimaria, CtoSecundaria, Cliente
 # Create your views here.
 
 def pesquisa(request):
-    template = loader.get_template('getData/pesquisa.html')
+    template = loader.get_template('getData/pesquisa_all.html')
     clientes = Cliente.objects.all()
     ctops = CtoPrimaria.objects.all()
     ctos= CtoSecundaria.objects.all()

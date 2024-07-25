@@ -3,21 +3,22 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<section class="main">
+<section class="centralizar_main">
 
-<h1>Pesquisar CTO Secundaria</h1>
+<h1 class="titulo">Pesquisar CTO Secundaria</h1>
 
-<form action="/get/pesquisa_cto/" method="get">
+<form class="formulario" action="/get/pesquisa_cto/" method="get">
   <label for="numeracao">Numeração CTO's:</label>
-  <input type="number" id="numeracao" name="numeracao">  
-
-  <br>
-  <input type="submit" value="pesquisar">
+  <input type="number" id="numeracao" name="numeracao"> 
+  <label for="numeracao">Numeração CTO'p:</label>
+  <input type="number" id="numeracao_p" name="numeracao_p">     
+  <input class="submit" type="submit" value="pesquisar">
 </form>
 
 
 
-<fieldset>
+
+<fieldset class="pesquisa">
   <legend>CTO's:</legend>
   <style>
     td{
@@ -25,7 +26,7 @@
     }
     
   </style>
-  <table >
+  <table>
     <tr>
       <th>Numeração</th>
       <th>Derivação</th>
@@ -39,14 +40,14 @@
     </tr>
     
       {% for cto in ctos %}
-        <tr>
+        <tr class="tr centralizar">
           <td>{{cto.numeracao}}</td>
           <td>{{cto.derivacao_ctoPrimaria}}</td>
           <td>{{cto.sinal_entrada}}</td>
           <td>{{cto.splitter}}</td>
           <td>{{cto.metragem}}</td>
           <td>{{cto.descricao}}</td>
-          <td><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td>
+          <td class="centralizar"><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td>
           
         </tr>
       {%endfor%}      
@@ -54,19 +55,13 @@
  
 </fieldset>
 
-<h1>Pesquisar CTO primaria</h1>
-
-<form action="/get/pesquisa_cto/" method="get">
-  <label for="numeracao">Numeração CTO'p:</label>
-  <input type="number" id="numeracao_p" name="numeracao_p">  
-
-  <br>
-  <input type="submit" value="pesquisar">
-</form>
+<h1 class="titulo">Pesquisar CTO primaria</h1>
 
 
 
-<fieldset>
+
+
+<fieldset class="pesquisa">
   <legend>CTOP's:</legend>
   <style>
     td{
@@ -88,13 +83,14 @@
     </tr>
     
       {% for ctop in ctops %}
-        <tr>
+        <tr class="tr centralizar">
           <td>{{ctop.numeracao}}</td>
           <td>{{ctop.cor_fibra_entrada}}</td>
           <td>{{ctop.sinal_entrada}}</td>
           <td>{{ctop.splitter}}</td>
           
           <td>{{ctop.descricao}}</td>
+          <td>Em desenvolvimento</td>
           <!-- <td><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td> -->
           
         </tr>

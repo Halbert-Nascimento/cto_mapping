@@ -271,7 +271,7 @@ def atualizar_cliente(request, pk):
     'range': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
     'nome': cliente.nome,
     'rg': cliente.rg,
-    'cto': cliente.numeracao_cto,
+    'cto_cliente': cliente.numeracao_cto,
     'porta': cliente.porta,
     'status': cliente.status,
     'metragem': cliente.metragem,
@@ -285,11 +285,15 @@ def atualizar_cliente(request, pk):
     nome = request.POST['nome']
     status = request.POST['status']
     porta_cto = int(request.POST['porta'])
-    numeracao_cto = int(request.POST['numeracao_cto'])
+    # numeracao_cto = int(request.POST['numeracao_cto'])
+    pk_cto = int(request.POST['numeracao_cto'])
     metragem = float(request.POST['metragem'])
 
 
-    cto_secundaria = CtoSecundaria.objects.get(numeracao = numeracao_cto)
+    cto_secundaria = CtoSecundaria.objects.get(pk = pk_cto)
+    print(cto_secundaria.pk)
+    print(cto_secundaria.numeracao)
+    print(cliente.numeracao_cto)
 
     
 
@@ -298,16 +302,16 @@ def atualizar_cliente(request, pk):
       messages.warning(request, f"Porta {porta_cto} da CTO ocupada! Conferir porta!")
 
     else:
-      if cliente.numeracao_cto != numeracao_cto:
-        cto_cliente = CtoSecundaria.objects.get(numeracao = cliente.numeracao_cto)
-        CtoSecundaria.remover_cliente(cto_cliente, cliente=cliente)
+      if cliente.numeracao_cto != cto_secundaria.numeracao:
+        cto_cliente_anterior = CtoSecundaria.objects.get(numeracao = cliente.numeracao_cto)
+        cto_cliente_anterior.remover_cliente(cliente=cliente) #remove da atual
         
-      CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+      CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto) # eadiciona na nova cto
 
       cliente.nome = nome
       cliente.status = status 
-      cliente.numeracao_cto = numeracao_cto
-      cliente. porta = porta_cto
+      cliente.numeracao_cto = cto_secundaria.numeracao
+      cliente.porta = porta_cto
       cliente.metragem = metragem
 
       cliente.save()

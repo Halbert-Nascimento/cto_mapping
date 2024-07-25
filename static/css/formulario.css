@@ -7,6 +7,9 @@
   padding: 20px;
   background: linear-gradient(to top, #3b2bec9f, #c3c2d49f);
 }
+strong{
+  font-weight: bold;
+}
 .titulo{
   font-size: 30px;
   font-weight: bold;
@@ -123,4 +126,61 @@
   border: 3px solid #fffb01;
   background: linear-gradient(to top, #eaee02b7, #f0d01b67); 
 
+}
+
+/* ####################### parte nova de pesquisa teste*/
+.centralizar_main{
+  width: 1000px;
+  margin: 0 auto;
+}
+.pesquisa legend{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0 20px 0;
+}
+.pesquisa table{
+  background: linear-gradient(to top, #3b2bec9f, #c3c2d49f); 
+  padding: 50px;
+  width: 50%;
+  border-radius: 10px;
+}
+.pesquisa th{
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  padding-bottom: 8px;  
+}
+.centralizar_main .pesquisa table{
+  width: 100%;  
+  margin-bottom: 10px;
+}
+.centralizar_main .formulario{
+  display: inline;
+}
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.td_nome{
+  width: 50%;
+}
+tbody .tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+tbody .tr:nth-child(even) {
+  background-color: #b3b3b3;
+}
+
+.pesquisa a{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.pesquisa a:hover{
+  font-size: 15px;
+  color: #3b2becd2;
+  
+}
+.centralizar{
+  text-align: center;
 }
