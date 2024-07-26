@@ -58,16 +58,20 @@ class CtoSecundaria(models.Model):
   # funcao para salvar o cliente e porta da cto, e definir o max de cliente que a cto aceita
   # recebe como parametro a instacia do cliente e a numeracao da porta 
   def adicionar_cliente(self, cliente, porta): # recebe instancia cliente , e numeracao da porta
-        if self.clientes.count() < self.splitter.splitter_tipo: # verifica se a quantidade de cliente e menor que o tamanho do splitter, que e oque define a quantidade
-            cliente.porta = porta # salva a numeracao da porta na instancia do cliente.porta
-            cliente.numeracao_cto = self.numeracao # salva a numeracao da cto na instancia do cliente.numeracao_cto
-            cliente.save() # salva no banco de dados
-            self.clientes.add(cliente) # adiciona a instancia do cliente a os clientes da cto
-        else:
-            raise ValueError(f"Limite de clientes atingido para esta CTO secundaria. max: {self.splitter}") # retonar um erro se tentar cadastrar mais cliente que a cto comporta
+    # if self.clientes.count() < self.splitter.splitter_tipo: # verifica se a quantidade de cliente e menor que o tamanho do splitter, que e oque define a quantidade
+
+    # cliente.porta = porta # salva a numeracao da porta na instancia do cliente.porta
+    # cliente.numeracao_cto = self.numeracao # salva a numeracao da cto na instancia do cliente.numeracao_cto
+    cliente.save() # salva no banco de dados
+    self.clientes.add(cliente) # adiciona a instancia do cliente a os clientes da cto
+    self.save()
+    
+    # else:
+    #     raise ValueError(f"Limite de clientes atingido para esta CTO secundaria. max: {self.splitter}") # retonar um erro se tentar cadastrar mais cliente que a cto comporta
         
   def remover_cliente(self, cliente):
      self.clientes.remove(cliente)
+     self.save()
 
         
 

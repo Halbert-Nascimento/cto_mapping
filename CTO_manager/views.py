@@ -227,7 +227,6 @@ def instalacao(request):
       messages.error(request, f"{nome} ja esta cadastrado em nosso banco de dados!") # salva uma menagem d error temporaria para exibir que ja esta cadstrado o splitter 
       
       cliente = Cliente.objects.get(rg=rg)
-
       return redirect(f'/ctomanager/atualizar_cliente/{cliente.pk}')
       
     else:
@@ -247,10 +246,11 @@ def instalacao(request):
         print(f"porta {porta_cto} livre, salvando cliente")
 
 
-        cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto= cto_secundaria.numeracao, metragem=metragem)
+        cliente = Cliente.objects.create(nome=nome, rg=rg, status=status, porta=porta_cto, numeracao_cto=cto_secundaria.numeracao, metragem=metragem)
 
         #Nome da class. função adc_cliente(cto_secundaria que vai receber as informações, o cliente e a porta)
-        CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+        # CtoSecundaria.adicionar_cliente(cto_secundaria, cliente=cliente, porta=porta_cto)
+        cto_secundaria.adicionar_cliente(cliente,porta_cto)
 
         messages.success(request, f"Cliente {nome} cadastrado na CTO {cto_secundaria.numeracao} porta {porta_cto}")
 

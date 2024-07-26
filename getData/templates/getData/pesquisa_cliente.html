@@ -43,6 +43,9 @@
           </tr>
         {%endfor%}      
     </table>
+    {% if not clientes %}
+      <p class="titulo"> Sem clientes! </p>
+    {% endif %}
    
   </fieldset>
 

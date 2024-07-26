@@ -43,18 +43,14 @@
 
     <p>
       <label for="numeracao_cto">Selecionar CTO:</label>
-      <select name="numeracao_cto" id="">
+      <select name="numeracao_cto" id="numeracao_cto">
         {% for cto in ctos %}
-        <option value="{{cto.pk}}">{{cto.numeracao}}</option>
-
-        {% endfor %}
-        
+          <option value="{{cto.pk}}">{{cto.numeracao}}</option>
+        {% endfor %}        
       </select>
       
       {% if not ctos %}
-
         <p class="atencao-null">CADASTRAR CTO ANTES</p>
-
       {% endif %}
 
     </p>

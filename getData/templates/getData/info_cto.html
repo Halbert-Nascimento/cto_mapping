@@ -3,13 +3,14 @@
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<h1>CTO {{cto.numeracao}} {{cto.splitter}}</h1>
+<section class="centralizar_main">
+<h1 class="titulo">CTO {{cto.numeracao}} {{cto.splitter}}</h1>
 
 
 
 
 
-<fieldset>
+<fieldset class="pesquisa">
   <legend>Clientes cto</legend>
   <table>
     <tr>
@@ -18,10 +19,12 @@
       <th>CTO</th>
       <th>Porta</th>
       <th>Metragem</th>
+      <th>Links</th>
     </tr>
-    
+
+      
       {% for cliente in clientes %}
-        <tr>
+        <tr class="tr centralizar">
           <td>{{cliente.nome}}</td>          
           <td>{{cliente.status}}</td>
           <td>{{cliente.numeracao_cto}}</td>
@@ -29,8 +32,13 @@
           <td>{{cliente.metragem}}</td>
           <td><a href="/ctomanager/atualizar_cliente/{{cliente.pk}}">Altera Info</a></td>
         </tr>
-      {%endfor%}      
+      {%endfor%} 
+      
+           
   </table>
+      {% if not clientes %}
+        <p class="titulo"> Sem clientes! </p>
+      {% endif %}
 
  
 </fieldset>
@@ -39,13 +47,14 @@
 
  
 
-  {% if messages  %}
-    {% for message in messages %}
-    <p> {{message}} </p>
-    {% endfor %}
-  {% endif %}
+{% if messages  %}
+{% for message in messages %}
+  <div  class=" messages {% if message.tags %}{{ message.tags }}{% endif %}" >
+    <p>{{message}} </p>
+  </div>
+  {% endfor %}
+{% endif %}
 
 
-
-
+</section>
 {% endblock %}
