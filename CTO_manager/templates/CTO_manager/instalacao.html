@@ -5,13 +5,12 @@
 {% block content %}
 <section class="main">
 
-<h1 class="titulo">Form Instalação</h1>
-<p class="informacao">Instalação de clientes</p>
+<!-- <h1 class="titulo">Form Instalação</h1> -->
+<p class="informacao titulo_medio">Instalação de clientes</p>
 
 <form class="formulario" action="/ctomanager/instalacao/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend class="legenda">Formulario de instalação de cliente:</legend>
     <span class="linha_media"></span>
     <p>
       <label for="nome">Nome:</label> <br>

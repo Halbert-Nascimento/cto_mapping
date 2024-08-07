@@ -4,13 +4,13 @@
 
 {% block content %}
 <section class="main">
-<h1 class="titulo">Form CTO'S</h1>
-<p class="informacao">Cadastro CTO secundaria</p>
+
+<p class="informacao titulo_medio">Cadastro CTO secundaria</p>
 
 <form class="formulario" action="/ctomanager/ctos/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend class="legenda">Selecione o tipo da {{titulo_form}}:</legend>
+    
     <span class="linha_media"></span>
     <p>
       Devida da CTO'P: 

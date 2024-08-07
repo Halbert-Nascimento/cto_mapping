@@ -1,11 +1,11 @@
 .main{
-  margin: 30px auto;
+  margin: 0 auto;
   /* background-color: #9e9ceb9f; */
-  min-height: 70vh;
+  min-height: 70dvh;
   max-width: 350px;
   border-radius: 25px;
-  padding: 20px;
-  background: linear-gradient(to top, #3b2bec9f, #c3c2d49f);
+  padding: 10px 20px;
+  background: linear-gradient(to top, #3b2bec9f, #d4c2c79f);
 }
 strong{
   font-weight: bold;
@@ -16,13 +16,21 @@ strong{
   text-align: center;
   padding: 10px 0;
 }
+.titulo_medio{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+
+}
 .main .informacao{
   letter-spacing: 1px;
-  padding: 10px 0 10px 15px;
+  padding-top: 10px;
+  /* padding-left: 15px; */
 }
-.formulario{
+/* .formulario{
   padding: 10px;
-}
+} */
 /* .formulario {
   border: black 1px solid;
   border-radius: 10px;
@@ -60,7 +68,7 @@ strong{
   height: 2px;
   width: 100%;
   background-color: red;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 

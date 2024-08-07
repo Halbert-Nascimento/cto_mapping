@@ -4,13 +4,12 @@
 
 {% block content %}
 <section class="main">
-<h1 class="titulo">Form CTO'P</h1>
-<p class="informacao">Cadastro CTO primaria</p>
+<p class="informacao titulo_medio">Cadastro CTO primaria</p>
 
 <form class="formulario" action="/ctomanager/ctop/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend class="legenda">Selecione o tipo do {{titulo_form}}:</legend>
+    
     <span class="linha_media"></span>
 
     <p>
@@ -40,13 +39,9 @@
     </p>
 
     <p>
-      <label for="sinal_in">Sinal de entrada:</label>
+      <label for="sinal_in">Sinal de entrada:</label><br>
       <input type="number" step="0.01" name="sinal_in" id="sinal_in">
     </p>
-
-    <p>
-      <span class="legenda_info">Tipo do splitter: </span>
-      <br>
 
       {% if not splitters %}
       <p class="atencao-null">Cadastrar splitter antes</p>
