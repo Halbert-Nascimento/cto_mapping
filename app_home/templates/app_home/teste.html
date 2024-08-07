@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+<script src="{% static 'js/testeTela.js' %}" defer></script>
+{% endblock %}
+
+{% block title %} Sobre {% endblock %}
+
+{% block content %}
+<h1 class="titulo"> Pagina de testes</h1>
+
+<h3>Tamanho da janela:<span class="window-size" style="color: green;" >tamanho</span></h3>
+
+<h3>Resolução monitor: <span class="screen-size" style="color: blue;"></span></h3>
+ 
+
+
+{% endblock %}

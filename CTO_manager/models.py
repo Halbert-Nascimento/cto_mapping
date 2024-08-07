@@ -21,6 +21,9 @@ class CtoPrimaria(models.Model):
   cor_fibra_entrada = models.CharField(max_length=20) # Cor da fibra de entrada para futuras manutencoes na caixa p
   sinal_entrada = models.FloatField() # Referencia para o sinal que esta chegando na caixa (futura implementacao para verificar atenuacoes na rota)
   splitter = models.ForeignKey(Splitter, on_delete=models.CASCADE) # Pre-requisito: cadastro do splitter; o tamanho do splitter define quantas CTOs secundarias a CTO primaria pode ter
+  dio = models.TextField(blank=True, null=True, default="não identificado", verbose_name='Identificao DIO') # Descição/ idenficação do DIO de saida
+  
+  olt_porta = models.IntegerField(blank=True , null=True) # identificaçã de porta de saida da OLT
 
   def __str__(self):
     return f"CTO_P: {self.numeracao}" # Retorna uma representacao em texto formatado com a numeracao da CTO primaria

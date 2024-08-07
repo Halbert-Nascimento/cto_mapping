@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseNew.html' %}
 
 {% block title %} {{titulo}} {% endblock %}
 
@@ -61,7 +61,14 @@
         
       {% endfor %}
       </select>
-
+    </p>
+    <p>
+      <label for="dio">DIO:</label><br>
+      <input type="text" name="dio" id="dio">      
+    </p>
+    <p>
+      <label for="olt_porta">Porta olt:</label><br>
+      <input type="number" name="olt_porta" id="olt_porta">
     </p>
 
     <p>

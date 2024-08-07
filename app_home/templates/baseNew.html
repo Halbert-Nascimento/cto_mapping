@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_menu_new.css' %}">
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+    
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <!-- <link rel="stylesheet" href="newStyle.css"> -->
+
+    <title>{% block title %}{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="menu-logo">
+            <div class="menu-toggle" id="menuToggle">&#9776;</div>
+            
+            <div class="logo">
+              <a href="{% url 'home' %}">
+                  <img class="logo-svg" src="{% static 'icons/connection_engine_internet_icon.svg'%}" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="icons">
+          <a href="{% url 'teste' %}"> <img class="icon-svg" src="{% static 'icons/search-clients.svg'%}"></a>
+          <a href="/admin"> <img class="icon-svg" src="{% static 'icons/notification-danger.svg'%}"></a>
+          <a href=""> <img class="icon-svg" src="{% static 'icons/sign_in_light_icon.svg'%}"></a>
+        </div>
+    </header>
+
+    <main class="homeApp">
+
+          {% block content %}
+          {% endblock %}
+
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+          <a href="https://github.com/Halbert-Nascimento" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/halbert-nascimento-1a989a174" target="_blank">LinkedIn</a>
+        </div>
+        <p>Halbert Nascimento</p>
+    </footer>
+
+    <nav id="sideMenu" class="side-menu">
+        <a href="#" class="close-btn" id="closeBtn">&times;</a>
+        <a class="" href="{% url 'cadastro_splitter' %}">Splitter</a>
+        <a class="" href="{% url 'cadastro_ctop' %}">CTO'P</a>
+        <a class="" href="{% url 'cadastro_ctos' %}">CTO'S</a>
+        <a class="" href="{% url 'instalacao' %}">Instalação</a>
+        <a class="" href="{% url 'pesquisa' %}">Query all</a>
+        <a class="" href="{% url 'pesquisa_cliente' %}">Pesquisar Cliente</a>
+        <a class="" href="{% url 'pesquisa_cto' %}">Pesquisar CTOs</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+    </nav>
+
+    <script>
+   
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sideMenu').classList.toggle('open');
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', function() {
+            document.getElementById('sideMenu').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
