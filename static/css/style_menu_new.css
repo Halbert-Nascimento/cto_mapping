@@ -44,28 +44,6 @@ header {
   height: 34px;
   margin-left: 15px;
 }
-.algunslinks{
-  margin: 0 auto;
-  padding: 10px 0;
-  display: flex;
-  gap: 10px;
-  background-color: aqua;
-  max-width: 100px;
-  overflow: hidden;
-  overflow-x: scroll;
-}
-.algunslinks::-webkit-scrollbar {
-  width: 8px; /* Largura da barra de rolagem */
-  height: 8px; /* Altura da barra de rolagem horizontal */
-}
-.algunslinks::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2); /* Cor do "polegar" da barra de rolagem */
-  border-radius: 10px; /* Bordas arredondadas */
-}
-
-.algunslinks::-webkit-scrollbar-track {
-  background: transparent; /* Cor do trilho da barra de rolagem */
-}
 
 .homeApp {
   flex: 1;
