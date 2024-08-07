@@ -6,12 +6,12 @@
 
   <div class="container">
  
-      <div class="box">Instalação</div>
-      <div class="box">Pesquisar Cliente</div>
-      <div class="box">CTO Primaria</div>
-      <div class="box">CTO Secundaria</div>
-      <div class="box">Troca de endereço</div>
-      <div class="box">Pesquisar CTO</div>
+      <div class="box"><a class="" href="{% url 'instalacao' %}">Instalação</a></div>
+      <div class="box"><a class="" href="{% url 'pesquisa_cliente' %}">Pesquisar Cliente</a></div>
+      <div class="box"><a class="" href="{% url 'cadastro_ctop' %}">CTO Primaria</a></div>
+      <div class="box"><a class="" href="{% url 'cadastro_ctos' %}">CTO Secundaria</a></div>
+      <div class="box"><a class="" href="{% url 'pesquisa_cliente' %}?nome=null">Troca de endereço</a></div>
+      <div class="box"><a class="" href="{% url 'pesquisa_cto' %}">Pesquisar CTOs</a></div>
   </div>
 
 {% endblock %}

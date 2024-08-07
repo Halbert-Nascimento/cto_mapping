@@ -4,10 +4,10 @@
 
 {% block content %}
 <section class="main">
-<h1>Form Atualização Instalação</h1>
+<h1 class="titulo">Form Atualização Instalação</h1>
 <p>Atualização de clientes</p>
 
-<form action="/ctomanager/atualizarendereco/" method="post">
+<form class="formulario" action="/ctomanager/atualizarendereco/" method="post">
   {% csrf_token  %}
   <fieldset>
     <legend>Pesquisar Cliente:</legend>
