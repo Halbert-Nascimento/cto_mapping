@@ -63,12 +63,13 @@ strong{
 
 }
 
-.formulario .linha_media{
+.linha_media{
   display: block;
   height: 2px;
   width: 100%;
   background-color: red;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 
@@ -171,12 +172,21 @@ th, td {
 }
 .td_nome{
   width: 50%;
+  text-transform: capitalize;
 }
+
 tbody .tr:nth-child(odd) {
   background-color: #e0e0e0;
 }
+tbody .tr:nth-child(odd):hover {
+  background: linear-gradient(to top, #7970dd9f, #d4c2c79f);
+}
+
 tbody .tr:nth-child(even) {
   background-color: #b3b3b3;
+}
+tbody .tr:nth-child(even):hover {
+  background: linear-gradient(to top, #7970dd9f, #d4c2c79f);
 }
 
 .pesquisa a{

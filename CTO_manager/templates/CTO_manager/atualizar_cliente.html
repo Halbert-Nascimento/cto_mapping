@@ -5,16 +5,21 @@
 {% block content %}
 <section class="main">
 
-<h1 class="titulo">Form Atualização de cliente</h1>
-<p class="informacao">
-  Cliente {{nome}}, RG {{rg}}, esta instalado na cto {{cto}} porta {{porta}}, <strong> Status {{status}}</strong>
-</p>
+<p class="informacao titulo_medio">Atualizar cliente</p>
+<span class="linha_media"></span>
+
+  <p class="informacao">
+    Cliente <strong> {{nome}}</strong>, esta instalado na CTO {{cto_cliente}} porta {{porta}},  Status <strong class="{{status}}">{{status}}</strong>
+  </p>
+
+<span class="linha_media"></span>
 
 
 <form class="formulario" action="/ctomanager/atualizar_cliente/{{pk}}/" method="post">
   {% csrf_token  %}
   <fieldset>
-    <legend class="legenda">Formulario de atualização de cliente:</legend>
+    
+    
     <p>
       <label for="nome">Nome:</label><br>
       <input type="text" name="nome" id="nome" value="{{nome}}" required>

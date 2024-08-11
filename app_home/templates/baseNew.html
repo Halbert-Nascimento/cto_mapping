@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/style_menu_new.css' %}">
     <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/geral.css' %}">
     
     <!-- <link rel="stylesheet" href="reset.css"> -->
     <!-- <link rel="stylesheet" href="newStyle.css"> -->
@@ -26,9 +27,9 @@
             </div>
         </div>
         <div class="icons">
-          <a href="{% url 'teste' %}"> <img class="icon-svg" src="{% static 'icons/search-clients.svg'%}"></a>
-          <a href="/admin"> <img class="icon-svg" src="{% static 'icons/notification-danger.svg'%}"></a>
-          <a href=""> <img class="icon-svg" src="{% static 'icons/sign_in_light_icon.svg'%}"></a>
+          <a href="{% url 'pesquisa' %}"> <img class="icon-svg" src="{% static 'icons/search-clients.svg'%}"></a>
+          <a href="{% url 'teste' %}"> <img class="icon-svg" src="{% static 'icons/notification-danger.svg'%}"></a>
+          <a href="/admin"> <img class="icon-svg" src="{% static 'icons/sign_in_light_icon.svg'%}"></a>
         </div>
     </header>
 

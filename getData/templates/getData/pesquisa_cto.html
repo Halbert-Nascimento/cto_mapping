@@ -1,17 +1,24 @@
 {% extends 'baseNew.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/pesquisa_clientes.css' %}">
+{% endblock %}
 
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<section class="centralizar_main">
+<section class="full_main">
 
-<h1 class="titulo">Pesquisar CTO Secundaria</h1>
+
 
 <form class="formulario" action="/get/pesquisa_cto/" method="get">
   <label for="numeracao">Numeração CTO's:</label>
   <input type="number" id="numeracao" name="numeracao"> 
+  <br>
   <label for="numeracao">Numeração CTO'p:</label>
-  <input type="number" id="numeracao_p" name="numeracao_p">     
+  <input type="number" id="numeracao_p" name="numeracao_p">  
+  <br>   
   <input class="submit" type="submit" value="pesquisar">
 </form>
 
@@ -19,23 +26,18 @@
 
 
 <fieldset class="pesquisa">
-  <legend>CTO's:</legend>
-  <style>
-    td{
-      border-bottom: 1px solid black;
-    }
-    
-  </style>
+  <legend>CTO's Secundaria:</legend>
+
   <table>
     <tr>
-      <th>Numeração</th>
+      <th>CTOS</th>
       <th>Derivação</th>
       <th>Sinal in</th>
       <th>Splitter</th>
-      <th>Metragem</th>
+      <!-- <th>Metragem</th> -->
       <!-- <th>Total Clientes</th> -->
-      <th>Descrição</th>
-      <th>Mais informações</th>
+      <!-- <th>Descrição</th> -->
+      <th>Clientes</th>
       
     </tr>
     
@@ -44,9 +46,9 @@
           <td>{{cto.numeracao}}</td>
           <td>{{cto.derivacao_ctoPrimaria}}</td>
           <td>{{cto.sinal_entrada}}</td>
-          <td>{{cto.splitter}}</td>
-          <td>{{cto.metragem}}</td>
-          <td>{{cto.descricao}}</td>
+          <td>1/{{cto.splitter.splitter_tipo}}</td>
+          <!-- <td>{{cto.metragem}}</td> -->
+          <!-- <td>{{cto.descricao}}</td> -->
           <td class="centralizar"><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td>
           
         </tr>
@@ -55,30 +57,22 @@
  
 </fieldset>
 
-<h1 class="titulo">Pesquisar CTO primaria</h1>
-
-
 
 
 
 <fieldset class="pesquisa">
-  <legend>CTOP's:</legend>
-  <style>
-    td{
-      border-bottom: 1px solid black;
-    }
-    
-  </style>
+  <legend>CTO's Primaria:</legend>
+
   <table >
     <tr>
-      <th>Numeração</th>
+      <th>CTOP</th>
       <th>Cor fibra entrada</th>
       <th>Sinal in</th>
       <th>Splitter</th>
       
       
       <th>Descrição</th>
-      <th>Mais informações</th>
+      <!-- <th>Mais informações</th> -->
       
     </tr>
     
@@ -87,10 +81,10 @@
           <td>{{ctop.numeracao}}</td>
           <td>{{ctop.cor_fibra_entrada}}</td>
           <td>{{ctop.sinal_entrada}}</td>
-          <td>{{ctop.splitter}}</td>
+          <td>1/{{ctop.splitter.splitter_tipo}}</td>
           
           <td>{{ctop.descricao}}</td>
-          <td>Em desenvolvimento</td>
+          <!-- <td>Em desenvolvimento</td> -->
           <!-- <td><a href="/get/pesquisa_cto/{{cto.pk}}">Mais info</a></td> -->
           
         </tr>

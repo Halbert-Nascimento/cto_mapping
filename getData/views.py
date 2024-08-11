@@ -123,11 +123,13 @@ def info_cto(request, pk):
 
     cto = CtoSecundaria.objects.get(pk=pk)
     clientes = cto.clientes.all()
+    total_cliente = len(clientes)
 
     context ={
         'titulo': f'CTO {cto.numeracao}',
         'cto': cto,
         'clientes': clientes,
+        'total_cliente':total_cliente
     }
     print(clientes)
 

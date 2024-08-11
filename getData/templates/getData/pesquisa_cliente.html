@@ -1,19 +1,19 @@
 {% extends 'baseNew.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/pesquisa_clientes.css' %}">
+{% endblock %}
 
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<section class="full ">
-<h1>Pesquisar</h1>
+<section class="full_main ">
 
 <form class="formulario" action="/get/pesquisa_cliente/" method="get">
 
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
-
-  
-
-
   <input class="submit" type="submit" value="pesquisar">
 </form>
 
@@ -24,22 +24,22 @@
     <table>
       <tr>
         <th>Nome</th>
-        <th>RG</th>
+        <!-- <th>RG</th> -->
         <th>Status</th>
         <th>CTO</th>
         <th>Porta</th>
-        <th>Metragem</th>
+        <!-- <th>Metragem</th> -->
       </tr>
       
         {% for cliente in clientes %}
-          <tr class="tr">
+        <tr class="tr onclick" onclick="location.href='/ctomanager/atualizar_cliente/{{cliente.pk}}'">
             <td class="td_nome">{{cliente.nome}}</td>
-            <td>{{cliente.rg}}</td>
-            <td>{{cliente.status}}</td>
+            <!-- <td>{{cliente.rg}}</td> -->
+            <td class="status {{cliente.status}} ">{{cliente.status}}</td>
             <td>{{cliente.numeracao_cto}}</td>
             <td>{{cliente.porta}}</td>
-            <td>{{cliente.metragem}}</td>
-            <td><a href="/ctomanager/atualizar_cliente/{{cliente.pk}}">Altera Info</a></td>
+            <!-- <td>{{cliente.metragem}}</td> -->
+            
           </tr>
         {%endfor%}      
     </table>

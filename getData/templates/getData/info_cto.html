@@ -1,36 +1,51 @@
 {% extends 'baseNew.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/pesquisa_clientes.css' %}">
+{% endblock %}
 
 {% block title %} {{titulo}} {% endblock %}
 
 {% block content %}
-<section class="centralizar_main">
-<h1 class="titulo">CTO {{cto.numeracao}} {{cto.splitter}}</h1>
+<section class="full_main">
 
+  <p class="informacao titulo_medio">CTO {{cto.numeracao}}</p>
+<span class="linha_media"></span>
 
+  <p class="descricao ">
+    Derivada da {{cto.derivacao_ctoPrimaria}} <br>
+    Sinal entrada: {{cto.sinal_entrada}}  <br>
+    Splitter: 1/{{cto.splitter.splitter_tipo}} <br>
+    Metragem: {{cto.metragem}} <br>
+    Total cliente: <strong> {{total_cliente}}</strong> <br>
+    Descrição: {{cto.descricao}}
+  </p>
 
+<span class="linha_media"></span>
 
 
 <fieldset class="pesquisa">
-  <legend>Clientes cto</legend>
+  <legend>Clientes na cto:</legend>
   <table>
     <tr>
       <th>Nome</th>
       <th>Status</th>
-      <th>CTO</th>
+      <!-- <th>CTO</th> -->
       <th>Porta</th>
       <th>Metragem</th>
-      <th>Links</th>
+      <!-- <th>Links</th> -->
     </tr>
 
       
       {% for cliente in clientes %}
-        <tr class="tr centralizar">
-          <td>{{cliente.nome}}</td>          
-          <td>{{cliente.status}}</td>
-          <td>{{cliente.numeracao_cto}}</td>
-          <td>{{cliente.porta}}</td>
-          <td>{{cliente.metragem}}</td>
-          <td><a href="/ctomanager/atualizar_cliente/{{cliente.pk}}">Altera Info</a></td>
+        <tr class="tr onclick" onclick="location.href='/ctomanager/atualizar_cliente/{{cliente.pk}}'">
+          <td class="td_nome">{{cliente.nome}}</td>          
+          <td class=" status {{cliente.status}}">{{cliente.status}}</td>
+          <!-- <td>{{cliente.numeracao_cto}}</td> -->
+          <td class="centralizar">{{cliente.porta}}</td>
+          <td class="centralizar">{{cliente.metragem}}</td>
+          <!-- <td><a href="/ctomanager/atualizar_cliente/{{cliente.pk}}">Altera Info</a></td> -->
         </tr>
       {%endfor%} 
       

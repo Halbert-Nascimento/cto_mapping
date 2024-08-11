@@ -1,0 +1,28 @@
+.homeApp{
+  padding-top: 0;
+  align-items: start;
+}
+
+
+.full_main{
+  max-width: 100dvh;
+}
+.tr {
+  cursor: pointer;
+}
+.td{
+  width: auto;
+}
+
+.td_nome {
+  /* width: auto; */
+  /* text-align: start ; */
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+.pesquisa .status{
+  text-align: center;
+  max-width: 12px;
+  font-weight: bold;
+  font-size: 10px;
+
+}
