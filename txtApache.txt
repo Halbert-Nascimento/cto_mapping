@@ -4,6 +4,9 @@
 //passa as permições para o usuario servido e deixa o grupo www-data
 => sudo chown -R servidor:www-data /var/www/projeto_cto/
 
+//Para dar permissão de escrita ao grupo www-data, execute o seguinte comando:
+=> sudo chmod -R g+w /var/www/projeto_cto/media/relationship_files
+
 //Desative o site padrão do Apache (opcional, mas recomendado):
 => sudo a2dissite 000-default.conf
 

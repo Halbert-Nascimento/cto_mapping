@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpreenda quem você ama</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff66b2;
+            text-align: center;
+        }
+        .subtitle {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .upload-button {
+            background-color: #ff66b2;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .upload-button:hover {
+            background-color: #ff3399;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Surpreenda quem você ama</h1>
+        <p class="subtitle">Transforme o tempo do seu relacionamento em uma linda lembrança. Mostre o quanto é especial o tempo que estão juntos!</p>
+        
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="upload-button">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

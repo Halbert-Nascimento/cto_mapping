@@ -1,0 +1,337 @@
+body {
+  position: relative; /* Importante para posicionar o pseudo-elemento */
+  background-color: #FFECEC;
+  font-family: 'Arial', sans-serif;
+  user-select: none;
+}
+
+body::before {
+  content: "";
+  background-image: url('imagemPraFundo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1; /* Ajuste a opacidade conforme desejado */
+  z-index: -1; /* Garante que a imagem fique abaixo do conteúdo */
+}
+.inicio{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+
+.menu{
+  height: 30px; /* Altura */
+  background-color: #FDD0D0; /* Cor de fundo */
+  margin-bottom: 30px; /* Margem inferior */
+}
+
+.titulo{
+  font-size: 2.25rem; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */  
+  color: #F37891; /* Cor do texto */
+  padding-top: 0.5rem; /* Espaçamento superior */
+  padding-bottom: 1rem; /* Espaçamento inferior */
+}
+.subtitulo{
+  font-size: 0.937rem; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: #644545; /* Cor do texto */
+  padding-bottom: 20px;
+}
+.subtitulo + .menor{
+  font-size: 0.87rem; /* Tamanho da fonte */  
+  padding-bottom: 28px;
+}
+
+
+#data{
+  width: 50%;
+  margin-right: 4%;
+}
+#time{
+  width: 30%;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+/* preview */
+
+.preview{
+  /* background-color: #fae5e5; */
+  max-width: 800px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  /*max-height: 100vh;/*Altura  remover bordar e altura posteriormente */
+  /* border: rgb(187, 185, 185) 1px solid; */
+  text-align: center;
+}
+.preview .carrossel{
+  text-align: center;
+
+}
+.carousel-image{
+  display: none;
+}
+.carousel-image.active {
+  display: block;
+}
+.preview .imgCarrossel{
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  height: 443px;
+  /* background-color: #F9B9B9; */
+  
+  
+}
+.preview .imgCarrossel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 40px 5px 40px; 
+}
+.preview .iconSlide span{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.preview .iconSlide span:hover{
+  background-color: #F37891;
+}
+
+.preview .agrupar{
+  position: relative;
+  overflow: hidden;
+  
+  /* object-fit: cover; */
+}
+.preview .contadoo{
+  width: 40%;
+  margin: auto;
+  margin-bottom: 90px;
+  line-height: 1.2;
+  /* position: relative; */
+}
+.preview .imagemDetalhe{
+  width: 80%;
+  position: absolute;
+  bottom: -44px;
+  left: 20px;  
+}
+.preview .mensagem{
+  padding: 10px 10% 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.preview .nomes{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #644545;
+  left: 10%;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  /* position: relative; */
+}
+/* .preview .nomes::after{
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: 250px;
+  width: 0;
+  height: 2px;
+  background-color: #F37891;
+  transition: all 1s ease; 
+}
+.preview .nomes:hover::after{
+  left: 0;
+  width: 98%;
+} */
+
+
+
+
+
+.comoFunciona .subtitulo{
+  margin:30px 0 52px 0;
+  font-size: 1.5rem;
+  color: #000;
+  text-transform: capitalize;
+  
+}
+.comoFunciona .etapas{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.comoFunciona .etapas .etapa_li{
+  font-size: 0.937rem;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+
+}
+
+
+.comoFunciona .etapas .etapa_li:hover::after{
+  left: 0;
+  width: 98%;
+}
+
+/* ########################## FAQ ################### */
+
+.faq .subtitulo{
+  margin:50px 0 30px 0;
+  font-size: 1.5rem;
+  color: #000;
+  text-transform: capitalize;
+}
+.faq .perguntas{
+  background-color: #fae5e5;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 50px;
+  padding: 10px 0 15px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.faq details{
+  max-width: 95%;
+  margin: 0 3% 5px;
+  text-align: left;
+  padding: 5px;
+  border: 1px solid #f7d6d6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  border-radius: 10px;
+  line-height: 1.1;
+  background-color: #fce2e2;
+  
+}
+.faq summary{
+  color: f000;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.25;
+
+
+}
+.faq p{
+  padding: 10px 5%;
+  font-size: 1.1rem;
+  
+}
+
+/* footer */
+
+.footer{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  justify-content: space-between;
+}
+.footer a{
+  color: #000000;
+}
+
+@media (max-width: 999px){
+  .comoFunciona, .faq{
+    margin: 0 5%;
+  }
+  .comoFunciona .subtitulo{
+    margin:40px 0 10px;    
+  }
+
+  .comoFunciona .etapas{
+    display: inline; 
+  
+  }
+  .comoFunciona .etapas .etapa_li{
+    font-size: 0.937rem;
+    font-weight: bold;
+    text-align: left;  
+  }
+
+  .comoFunciona .button{
+    display: none;
+  }
+ 
+}
+
+
+@media(max-width: 415px){
+
+  .inicio{
+    margin: 0 5%;
+  }
+  .unirNomes{
+    display: none;
+  }
+  .NomesCasal{
+    width: 45%;
+  }
+
+  .preview .imgCarrossel{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 500px;
+    /* background-color: #F9B9B9; */
+    
+    
+  }
+  
+  .preview .contadoo{
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .preview .imagemDetalhe{
+    width: 90%;
+    bottom: -20px;
+    left: 20px;  
+  }
+
+  .comoFunciona, .faq{
+    margin: 0 5%;
+  }
+  .comoFunciona .subtitulo{
+    margin:40px 0 10px;    
+  }
+
+  .comoFunciona .etapas{
+    display: inline; 
+  
+  }
+  .comoFunciona .etapas .etapa_li{
+    font-size: 0.937rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .comoFunciona .button{
+    display: none;
+  }
+}
+

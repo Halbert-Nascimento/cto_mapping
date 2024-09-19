@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/reset.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/style.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body oncontextmenu="return false">
+  <div class="menu"></div>
+
+  <section class="inicio">
+  <div class="conteinerForm">
+    <h1 class="titulo principal">
+      Surpreenda quem você ama
+    </h1>
+
+    <h3 class="subtitulo">
+      Transforme o tempo do seu relacionamento em uma linda lembrança, Mostre o quanto e  especial o tempo que estão juntos!
+    </h3>
+
+    <h4 class="subtitulo menor">
+      Preencha o formulário e crie um site personalizado com um contador exclusivo. Compartilhe essa homenagem especial com seu amor através de um QR Code!
+    </h4>
+
+    <form class="formCasal" id="formCasal" enctype="multipart/form-data" action="/love/saveTemporaryData/" method="post">{% csrf_token %}
+      <div>
+        <label for="nome1">Nomes do casal:</label>
+        <div class="flex">
+          <input type="text" name="nome1" id="nome1" class="NomesCasal" placeholder="Nome 1">
+          <span class="unirNomes">&</span>
+          <input type="text" name="nome2" id="nome2" class="NomesCasal" placeholder="Nome 2">
+
+        </div>
+      </div> 
+
+      <div>
+        <label for="data">Início do relacionamento:</label>
+        <div class="flex">
+        <input type="date" name="data" id="data">
+        <input type="time" name="time" id="time">
+        </div>
+      </div>
+      
+
+      <div>
+        <label for="mensagem"> Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem personalizada"></textarea>        
+      </div>
+
+      <div>
+        <label class="upload_fotos" for="foto">Escolher fotos casal (max 4)</label>
+        <input type="file" name="fotos" id="foto" accept="image/*" multiple style="display: none;">
+      </div>
+
+      <div>
+        <input class="link_musica" id="link_musica" type="url" name="urlMusica" placeholder="Link para musica youtube" >
+      </div> 
+      <div class="button btn_criar_site">
+        <button>Criar meu site</button>
+      </div>    
+    </form>
+    <div class="midiaSocial">
+      <div class="iconSocial"><a href=""><img src="{% static 'siteDeclaracao/tiktok_icon.svg' %}" alt="tik"></a></div>
+      
+      <div class="iconSocial"><a href=""><img src="{% static 'siteDeclaracao/instagram_icon.svg' %}" alt="ins"></a></div>
+      
+    </div>
+
+   </div> <!--//fechamento container form -->
+
+   <div class="preview">
+    <h1 class="titulo principal" id="preview_titulo">I love you</h1>
+
+    <div class="carrossel">
+      <div class="imgCarrossel"  id="imgCarrossel">
+        <img id="preview_imagem1" class="carousel-image" src="{% static 'siteDeclaracao/casal1.jpg' %}" alt="ft1">
+        <!-- <img id="preview_imagem2" class="carousel-image" src="{% static 'siteDeclaracao/casal2.jpg' %}" alt="ft2"> -->
+        <!-- <img id="preview_imagem3" class="carousel-image" src="{% static 'siteDeclaracao/casal3.jpg' %}" alt="ft3"> -->
+      </div>
+
+      
+    </div> <!--//fechamento carrossel -->
+    
+    <div class="iconSlide">
+      <span id="prev"></span>
+      <span></span>
+      <span id="next"></span>
+    </div> <!--//fechamento iconSlide -->
+
+    <div class="nomes">
+      <h3 class="nomes"><span id="preview_nome1">Florisbela</span> & <span id="preview_nome2">Joao</span></h3>
+    </div>
+    <div class="agrupar">
+      <h3 class="contadoo" id="preview_cont_anos"> anos, 2 meses, 9 dias 3 horas, 20 minutos e 8 segundos de nós!      
+      </h3>
+
+      <div class="imagemDetalhe"><img src="{% static 'siteDeclaracao/coracao_lapis2.png' %}" alt=""></div>
+
+    </div>
+
+    
+
+
+    <div class="mensagem" >
+      <p id="preview_mensagem">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type speci...</p>
+    </div>
+
+    <div class="button btn_criar_site">
+      <button>Criar meu site</button>
+    </div>
+
+   </div> <!--//fechamento preview -->
+
+  </section> <!--//fechamento Início -->
+
+<!-- ############################################# -->
+ 
+  <section class="comoFunciona">
+    <h3 class="subtitulo">Como funciona</h4>
+      <ol class="etapas">
+        <li class="etapa_li">
+          Preencha os campos
+        </li>
+        <li class="etapa_li">
+          Realize o pagamento
+        </li>  
+        <li class="etapa_li">
+          Receba seu site personalizado + QR Code
+        </li>
+        <li class="etapa_li">
+          Surpreenda quem você ama ❤️
+        </li>
+      </ol>
+      <div class="button btn_criar_site">
+        <button>Criar meu site</button>
+      </div>
+  </section>
+
+  <section class="faq">
+
+    <h3 class="subtitulo">Perguntas Frequentes (FAQ)</h3>
+
+    <div class="perguntas">
+      <details>
+        <summary>O que o site?</summary>
+          <p>O Site  é uma plataforma que permite criar páginas personalizadas de relacionamento para casais. Você pode adicionar fotos, uma mensagem especial e um contador que mostra há quanto tempo vocês estão juntos.</p>
+      </details>
+  
+      <details>
+        <summary>O que faz o site?</summary>
+          <p>O Site  é uma plataforma que permite criar páginas personalizadas de relacionamento para casais. Você pode adicionar fotos, uma mensagem especial e um contador que mostra há quanto tempo vocês estão juntos.</p>
+      </details>
+  
+      <details>
+        <summary>{{pergunta}}</summary>
+          <p>{{resposta}}</p>
+      </details>
+    </div>    
+
+    <div class="button btn_criar_site">
+      <button>Criar meu site</button>
+    </div>
+  </section>
+
+  <section class="footer">
+
+
+
+    <div class="termos">
+      <a href="">Termos de uso </a> /
+      <a href="">Termos de privacidade</a>
+    </div>
+ 
+  </section>
+
+
+
+
+  <script src="{% static 'siteDeclaracao/script/script_home.js' %}">
+    // Impede a cópia de texto
+    document.addEventListener('copy', function (e) {
+        e.preventDefault();
+        alert('Copiar texto não permitido no momento!');
+    });
+</script>
+</body>
+</html>

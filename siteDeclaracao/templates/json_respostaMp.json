@@ -1,0 +1,156 @@
+
+{
+  "accounts_info": null,
+  "acquirer_reconciliation": [],
+  "additional_info": {
+      "authentication_code": null,
+      "available_balance": null,
+      "ip_address": "177.75.14.190",
+      "items": [
+          {
+              "category_id": null,
+              "description": "Teste de pagamento",
+              "id": "1",
+              "picture_url": null,
+              "quantity": "1",
+              "title": "Site Personalizado teste",
+              "unit_price": "20.5"
+          }
+      ],
+      "nsu_processadora": null
+  },
+  "authorization_code": null,
+  "binary_mode": false,
+  "brand_id": null,
+  "build_version": "3.70.0-rc-2",
+  "call_for_authorize_id": null,
+  "captured": true,
+  "card": {},
+  "charges_details": [
+      {
+          "accounts": {
+              "from": "collector",
+              "to": "mp"
+          },
+          "amounts": {
+              "original": 1.02,
+              "refunded": 0
+          },
+          "client_id": 0,
+          "date_created": "2024-09-19T00:23:21.000-04:00",
+          "id": "87950394681-001",
+          "last_updated": "2024-09-19T00:23:21.000-04:00",
+          "metadata": {
+              "source": "rule-engine"
+          },
+          "name": "mercadopago_fee",
+          "refund_charges": [],
+          "reserve_id": null,
+          "type": "fee"
+      }
+  ],
+  "collector_id": 1996563216,
+  "corporation_id": null,
+  "counter_currency": null,
+  "coupon_amount": 0,
+  "currency_id": "BRL",
+  "date_approved": "2024-09-19T00:23:21.000-04:00",
+  "date_created": "2024-09-19T00:23:21.000-04:00",
+  "date_last_updated": "2024-09-19T00:23:24.000-04:00",
+  "date_of_expiration": null,
+  "deduction_schema": null,
+  "description": "Site Personalizado teste",
+  "differential_pricing_id": null,
+  "external_reference": null,
+  "fee_details": [
+      {
+          "amount": 1.02,
+          "fee_payer": "collector",
+          "type": "mercadopago_fee"
+      }
+  ],
+  "financing_group": null,
+  "id": 87950394681,
+  "installments": 1,
+  "integrator_id": null,
+  "issuer_id": "2007",
+  "live_mode": true,
+  "marketplace_owner": null,
+  "merchant_account_id": null,
+  "merchant_number": null,
+  "metadata": {
+      "attempt_id": "fda4415cysql0v3d3tr6pcl2i4rcd0u9-4268e6cc36934d218c42",
+      "session_id": "fda4415cysql0v3d3tr6pcl2i4rcd0u9"
+  },
+  "money_release_date": "2024-09-19T00:23:21.000-04:00",
+  "money_release_schema": null,
+  "money_release_status": "released",
+  "notification_url": null,
+  "operation_type": "regular_payment",
+  "order": {
+      "id": "22973977485",
+      "type": "mercadopago"
+  },
+  "payer": {
+      "email": "test_user_395525466@testuser.com",
+      "entity_type": null,
+      "first_name": null,
+      "id": "1996565812",
+      "identification": {
+          "number": "11111111111",
+          "type": "CPF"
+      },
+      "last_name": null,
+      "operator_id": null,
+      "phone": {
+          "number": null,
+          "extension": null,
+          "area_code": null
+      },
+      "type": null
+  },
+  "payment_method": {
+      "id": "account_money",
+      "issuer_id": "2007",
+      "type": "account_money"
+  },
+  "payment_method_id": "account_money",
+  "payment_type_id": "account_money",
+  "platform_id": null,
+  "point_of_interaction": {
+      "business_info": {
+          "branch": "Merchant Services",
+          "sub_unit": "checkout_pro",
+          "unit": "online_payments"
+      },
+      "transaction_data": {
+          "e2e_id": null
+      },
+      "type": "CHECKOUT"
+  },
+  "pos_id": null,
+  "processing_mode": "aggregator",
+  "refunds": [],
+  "release_info": null,
+  "shipping_amount": 0,
+  "sponsor_id": null,
+  "statement_descriptor": null,
+  "status": "approved",
+  "status_detail": "accredited",
+  "store_id": null,
+  "tags": null,
+  "taxes_amount": 0,
+  "transaction_amount": 20.5,
+  "transaction_amount_refunded": 0,
+  "transaction_details": {
+      "acquirer_reference": null,
+      "external_resource_url": null,
+      "financial_institution": null,
+      "installment_amount": 0,
+      "net_received_amount": 19.48,
+      "overpaid_amount": 0,
+      "payable_deferral_period": null,
+      "payment_method_reference_id": null,
+      "total_paid_amount": 20.5
+  }
+}

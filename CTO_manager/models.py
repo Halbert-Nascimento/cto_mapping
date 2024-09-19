@@ -25,6 +25,8 @@ class CtoPrimaria(models.Model):
   
   olt_porta = models.IntegerField(blank=True , null=True) # identificaçã de porta de saida da OLT
 
+  conexoes = models.JSONField(blank=True, null=True)
+
   def __str__(self):
     return f"CTO_P: {self.numeracao}" # Retorna uma representacao em texto formatado com a numeracao da CTO primaria
 
@@ -57,6 +59,8 @@ class CtoSecundaria(models.Model):
 
   clientes = models.ManyToManyField(Cliente, blank=True) # Este e o tipo de campo que define uma relacao de muitos-para-muitos com o modelo Cliente.
   # total_clientes = clientes.count()
+
+  conexoes = models.JSONField(blank=True, null=True)
 
   # funcao para salvar o cliente e porta da cto, e definir o max de cliente que a cto aceita
   # recebe como parametro a instacia do cliente e a numeracao da porta 

@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/reset.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/style_pag_personalizada.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+  <title>{{title}}</title>
+  <style>
+    #dados{
+      display: none;
+    }
+
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <div id="dados">
+    <span id="data">{{data}}</span>
+    <span id="time">{{time}}</span>
+    <span id="urlMusica">{{urlMusica}}</span>
+
+  </div>
+  
+
+  <!-- <div class="menu"></div> -->
+
+  <section class="inicio">
+  
+
+   <div class="preview">
+    <h1 class="titulo principal" id="preview_titulo">{{titulo}}</h1>
+    
+    <div class="carrossel">
+      <div class="imgCarrossel"  id="imgCarrossel">
+        
+        
+        
+
+        {% if fotos %}        
+        {% for foto in fotos %}
+          <img id="" class="carousel-image" src="{{ foto.imagem.url }}" alt="">
+        {% endfor %}
+          
+        {% else %}
+        <p>Não tem foto</p>
+        {% endif %}
+        
+        
+      </div>
+
+      
+    </div> <!--//fechamento carrossel -->
+    
+    <div class="iconSlide">
+      <span id="prev"></span>
+      <span></span>
+      <span id="next"></span>
+    </div> <!--//fechamento iconSlide -->
+
+    <div class="nomes">
+      <h3 class="nomes"><span id="preview_nome1"> {{user.name1}} </span> & <span id="preview_nome2">{{user.name2}}</span></h3>
+    </div>
+    <div class="agrupar">
+      <h3 class="contadoo" id="preview_cont_anos"> anos, 2 meses, 9 dias 3 horas, 20 minutos e 8 segundos de nós!      
+      </h3>
+
+      <div class="imagemDetalhe"><img src="{% static 'siteDeclaracao/coracao_lapis2.png' %}" alt=""></div>
+
+    </div>
+
+    
+
+
+    <div class="mensagem" >
+      <p id="preview_mensagem"> {{user.message}} </p>
+    </div>
+
+   
+
+   </div> <!--//fechamento preview -->
+   
+
+  
+
+  </section> <!--//fechamento Início -->
+
+<!-- ############################################# -->
+ 
+<div class="musica" style="text-align: center; padding-top: 50px;">
+  <iframe id="youtube-video" src="{{ urlMusica }}" width="560" height="215" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div> <!--//fechamento musica -->
+
+  <section class="footer">
+
+
+
+    <div class="termos">
+      <a href="">Termos de uso </a> /
+      <a href="">Termos de privacidade</a>
+    </div>
+ 
+  </section>
+
+
+
+  <script src="{% static 'siteDeclaracao/script/script_pag_personalizada.js' %}">
+    
+
+    // Impede a cópia de texto
+    document.addEventListener('copy', function (e) {
+        e.preventDefault();
+        alert('Copiar texto não permitido no momento!');
+    });
+</script>
+</body>
+</html>
