@@ -121,6 +121,52 @@ body::before {
   margin-bottom: 20px;
 }
 
+.formCasal .plano{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  
+  background-color: #f5dee3;
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  
+}
+
+.formCasal .plano .planoInput{
+  display: none;
+}
+.formCasal .plano label{
+  padding: 0;
+  margin: 0 2px;
+  /* display: inline-block;   */
+  color: #ffffff;
+  background-color: #f598aa;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.plano .planoInput:checked + label{
+  border: 2px solid #f598aa;
+  height: 80%;
+  align-content: center; 
+  
+  background: linear-gradient(to right, #ffffff, #d85771);
+
+}
+
+.formCasal .plano label:hover{
+  transform: scale(1.1);
+}
+
+
 .midiaSocial{  
   display: flex;
   justify-content: center;

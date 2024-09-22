@@ -1,7 +1,9 @@
 
 {
   "accounts_info": null,
+
   "acquirer_reconciliation": [],
+
   "additional_info": {
       "authentication_code": null,
       "available_balance": null,
@@ -19,6 +21,7 @@
       ],
       "nsu_processadora": null
   },
+
   "authorization_code": null,
   "binary_mode": false,
   "brand_id": null,
@@ -26,6 +29,7 @@
   "call_for_authorize_id": null,
   "captured": true,
   "card": {},
+
   "charges_details": [
       {
           "accounts": {
@@ -37,19 +41,23 @@
               "refunded": 0
           },
           "client_id": 0,
+
           "date_created": "2024-09-19T00:23:21.000-04:00",
           "id": "87950394681-001",
           "last_updated": "2024-09-19T00:23:21.000-04:00",
           "metadata": {
               "source": "rule-engine"
           },
+
           "name": "mercadopago_fee",
           "refund_charges": [],
           "reserve_id": null,
           "type": "fee"
       }
   ],
+
   "collector_id": 1996563216,
+  
   "corporation_id": null,
   "counter_currency": null,
   "coupon_amount": 0,

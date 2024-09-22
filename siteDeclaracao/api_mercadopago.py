@@ -2,7 +2,7 @@ import mercadopago
 from .chaveToken import chaveAPI
 
 
-def gerar_link_pagamento( session_id, attempt_id, item, valor, descricao,  quantidade):
+def gerar_link_pagamento( session_id, attempt_id, item, valor, descricao,  quantidade, planoInput):
     sdk = mercadopago.SDK(chaveAPI())
 
     request_options = mercadopago.config.RequestOptions()
@@ -23,6 +23,7 @@ def gerar_link_pagamento( session_id, attempt_id, item, valor, descricao,  quant
         "metadata": {
             "attempt_id": attempt_id, 
             "session_id": session_id,
+            "plano_input": planoInput,
         },
         "back_urls": {
             "success": "https://www.htecfull.com/love/success",

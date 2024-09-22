@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/reset.css' %}"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/styleConfirmacao.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  
+</head>
+<body>
+  <div class="content">
+    <h1>Pagamento Pendente!</h1>
+    <h3>Valor a ser pago: {{payment_value}}</h3>
+    <h4>Seu site foi criado, porém so estara disponivel apos finalizar pagamento</h4>
+    <h4>Seu site estará disponível por <span class="strong">{{periodo}} , finalize o pagamento</span>.</h4>
+    <p>Após esse período, o site será automaticamente excluído.</p>
+    <p>Após esse período de 3 dias se não for identicado pagamento, o site será automaticamente excluído. e será necessario realizar todo o processo novamente!</p>
+    <p>Você poderá criar um novo site acessando <a href="{{url.cadastro}}">este link</a>.</p>
+    
+    <h2>Apos pagamento sera liberado automaticamente! </h2>
+    <p><strong>Você pode acessar o site clicando no botão abaixo ou escaneando o QR code:</strong></p>
+    <a href="{{url.url_access}}" class="cta-button">Acessar Site</a>
+    
+    <div class="qrcode">
+      <h2 class="subtitulo">QR Code para Acesso</h2>
+      <p>Escaneie o QR Code abaixo para acessar seu site de forma rápida ou imprima para compartilhar:</p>
+      <div class="qr">
+        <img src="{{qrcode}}" alt="QR Code do Site">
+      </div>
+    </div>
+    
+    <a href="{{url.new_link_pagamento}}">Novo link para pagamento</a>
+
+  </div>
+</body>
+</html>

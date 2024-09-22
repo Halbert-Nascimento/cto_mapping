@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/reset.css' %}"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'siteDeclaracao/styleConfirmacao.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  
+</head>
+<body>
+  <div class="content">
+    <h1>Falha no pagamento!</h1>
+    <h3>Valor pago: {{payment_value}}</h3>
+    
+    <p>Após esse período de 3 dias se não for identicado pagamento, o site será automaticamente excluído. e será necessario realizar todo o processo novamente!</p>
+    <p>Você poderá criar um novo site acessando <a href="{{url.cadastro}}">este link</a>.</p>
+
+    <h2>Apos pagamento sera liberado automaticamente! </h2>
+
+    <h2>Tentar pagar novamente?
+      <p><a href="{{url.new_link_pagamento}}">Novo link</a></p>
+
+    </h2>
+    
+    
+   
+
+  </div>
+</body>
+</html>

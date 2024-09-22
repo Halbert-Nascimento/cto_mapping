@@ -63,6 +63,9 @@ def delete_arquivos_on_delete(sender, instance, **kwargs):
             # Remove o arquivo do sistema de arquivos
             os.remove(instance.arquivos.path)
 
+
+
+## MODELOS PARA APLICATIVO DE CRIAÇÃO DE PÁGINAS TEMPORÁRIAS
 class TemporaryPageData(models.Model):
     session_id = models.CharField(max_length=100)
     attempt_id = models.CharField(max_length=200, unique=True, default=(uuid.uuid4()))
@@ -87,6 +90,60 @@ class TemporaryPageImage(models.Model):
         return f"Temporary_Image for {self.image}"
     
 @receiver(post_delete, sender=TemporaryPageImage)
+def delete_imagem_on_delete(sender, instance, **kwargs):
+    """
+    Função de sinal que remove o arquivo de imagem do sistema de arquivos
+    quando uma instância do modelo Fotos é deletada do banco de dados.
+    """
+    if instance.image:
+        # Verifica se a imagem existe no sistema de arquivos e se é um arquivo
+        if os.path.isfile(instance.image.path):
+            # Remove a imagem do sistema de arquivos
+            os.remove(instance.image.path)
+
+
+## MODELOS PARA APLICATIVO DE PAGAMENTO
+class DataUserPayment(models.Model):
+    session_id = models.CharField(max_length=100)
+    attempt_id = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=100)
+    email = models.EmailField( blank=True, null=True)
+    cpf = models.CharField(max_length=11, blank=True, null=True)
+    payment_status = models.CharField(max_length=100,)
+    payment_status_detail = models.CharField(max_length=100, blank=True, null=True)
+    payment_value = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    active_time_month = models.IntegerField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name}: plano de {self.active_time_month} mes(es)"
+
+class PageRelationship(models.Model):
+    DataUserPayment = models.OneToOneField(DataUserPayment, on_delete=models.CASCADE, related_name='page_relationship')
+    url_access = models.URLField(max_length=150, unique=True)
+    url_access_split = models.CharField(max_length=100, blank=True, null=True)
+    status = models.CharField(max_length=100, default='pending')
+    name1 = models.CharField(max_length=100)
+    name2 = models.CharField(max_length=100)
+    relationship_start_date = models.DateField()
+    relationship_start_time = models.TimeField()
+    message = models.TextField()
+    youtube_link = models.URLField(blank=True, null=True)   
+
+
+    def __str__(self):
+        return f"URL: {self.url_access}"
+
+
+class PageRelationshipImage(models.Model):
+    PageRelationship = models.ForeignKey(PageRelationship, on_delete=models.CASCADE, related_name='page_images')
+    image_title = models.CharField(max_length=100 , default='image')
+    image = models.ImageField(upload_to='relationship_files/', blank=True, null=True)
+
+    def __str__(self):
+        return f"Image for {self.image}"
+
+@receiver(post_delete, sender=PageRelationshipImage)
 def delete_imagem_on_delete(sender, instance, **kwargs):
     """
     Função de sinal que remove o arquivo de imagem do sistema de arquivos
