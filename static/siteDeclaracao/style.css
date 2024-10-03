@@ -366,6 +366,19 @@ img{
   font-size: 1.1rem;
   
 }
+.faq ol{
+  
+  padding-left: 7%;
+  
+}
+.faq ol li{
+  padding-bottom: 8px;  
+  text-decoration: none;
+}
+.faq .italico{
+  font-style: italic;
+  font-weight: bold;
+}
 
 /* footer */
 

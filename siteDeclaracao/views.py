@@ -79,9 +79,14 @@ def relationship_form(request): # apagar apos implementação do restante do sit
 
 def index(request):
   template = loader.get_template('home.html')
+  termos = {
+      'uso': 'http://'+request.get_host()+'/love/termosdeuso/',
+      'privacidade': 'http://'+request.get_host()+'/love/termosdeuso/',
+  }
   context = {
       'title': 'Love Calculator',
-      'content': 'Home page'
+      'content': 'Home page',
+      'termos': termos,
   }
 
   return  HttpResponse(template.render(context, request))
@@ -560,4 +565,16 @@ def confirmacao(request):
         'payment_value': payment_value,
     }
     #renderiza a pagina
+    return HttpResponse(template.render(context, request))
+
+
+
+def termosDeUso(request):
+    template = loader.get_template('termos_de_uso.html')
+    context = {
+        'title': 'Termos de Uso',
+        'content': 'Termos de Uso',
+        'home': 'http://'+request.get_host()+'/love/home/',
+        
+    }
     return HttpResponse(template.render(context, request))

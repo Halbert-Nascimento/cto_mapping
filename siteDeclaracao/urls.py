@@ -11,17 +11,14 @@ urlpatterns = [
     path('criarSite/', views.criarSite, name='criarSite'),
     path('saveTemporaryData/', views.saveTemporaryData, name='saveTemporaryData'),
     path('post/<str:url>', views.url_personalizada, name='url_personalizada'),
-    path('home/<str:pk>', views.url_personalizadaID, name='url_personalizadaID'), 
+    path('home/<str:pk>', views.url_personalizadaID, name='url_personalizadaID'),
+    path('termosdeuso/', views.termosDeUso, name='termosDeUso'),
         
     #pagina  para redirecionamento da API de pagamento sucess, fail, pending
-    path('success/', views.success, name='success'),
-    # path('fail/', views.success, name='success'),
-    # path('pending/', views.success, name='success'),
-
-    path('fail/', views.fail, name='fail'),
-    path('pending/', views.pending, name='pending'),
-    # path('confirmacao/<str:url_access>/<str:periodo>', views.confirmacao, name='confirmacao'),
-    path('confirmacao/', views.confirmacao, name='confirmacao'),
+    path('success/', views.success, name='success'), #pagina de sucesso
+    path('fail/', views.fail, name='fail'), #pagina de falha
+    path('pending/', views.pending, name='pending'), #pagina de pendente
+    path('confirmacao/', views.confirmacao, name='confirmacao'), #pagina de feedback de pagamento em caso de sucesso
 ] 
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -10441,3 +10441,1338 @@ siteDeclaracao.models.Relationship.DoesNotExist: Relationship matching query doe
 2024-09-22 03:49:46,137 - WARNING - Not Found: /.git/config
 2024-09-22 04:40:41,809 - WARNING - Not Found: /robots.txt
 2024-09-22 06:17:25,416 - WARNING - Not Found: /login
+2024-09-22 07:06:28,972 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:11:16,575 - WARNING - Not Found: /geoserver/web/
+2024-09-22 07:12:29,663 - WARNING - Not Found: /.git/config
+2024-09-22 07:16:10,560 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:16:11,910 - WARNING - Not Found: /sitemap.xml
+2024-09-22 07:16:11,920 - WARNING - Not Found: /robots.txt
+2024-09-22 07:23:51,516 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:31:05,380 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:31:13,856 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:31:27,699 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:33:15,394 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:33:32,937 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:33:44,281 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:34:05,798 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:34:28,994 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:34:55,149 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:34:55,315 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:35:11,473 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:35:49,225 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:36:36,951 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:37:07,677 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:37:21,657 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:37:52,621 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:37:59,966 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:11,451 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:19,736 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:20,028 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:31,432 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:31,575 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:42,234 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:50,682 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:38:50,961 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:39:11,830 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:39:12,009 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:40:53,335 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:41:16,725 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:41:36,542 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:41:41,841 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:41:41,852 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:46:01,043 - INFO - /var/www/projeto_cto/siteDeclaracao/urls.py changed, reloading.
+2024-09-22 07:46:29,662 - INFO - /var/www/projeto_cto/siteDeclaracao/views.py changed, reloading.
+2024-09-22 07:47:54,011 - INFO - /var/www/projeto_cto/siteDeclaracao/views.py changed, reloading.
+2024-09-22 07:49:24,323 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:49:25,514 - INFO - /var/www/projeto_cto/siteDeclaracao/views.py changed, reloading.
+2024-09-22 07:50:08,948 - INFO - /var/www/projeto_cto/siteDeclaracao/views.py changed, reloading.
+2024-09-22 07:50:12,474 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:50:14,590 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:50:17,404 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 07:50:34,035 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 07:50:54,388 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 07:50:54,576 - WARNING - Not Found: /favicon.ico
+2024-09-22 07:51:39,887 - ERROR - Internal Server Error: /love/home/12
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 154, in url_personalizadaID
+    user = Relationship.objects.get(id=pk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+siteDeclaracao.models.Relationship.DoesNotExist: Relationship matching query does not exist.
+2024-09-22 07:51:47,808 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 07:52:39,755 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 07:53:04,036 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 07:53:47,921 - ERROR - Internal Server Error: /love/termosdeuso/
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/siteDeclaracao/views.py", line 573, in termosDeUso
+    template = loader.get_template('termos_de_uso.html')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static'. Did you forget to register or load this tag?
+2024-09-22 08:09:28,038 - WARNING - Not Found: /love/termosdeuso/index.html
+2024-09-22 08:10:17,637 - INFO - /var/www/projeto_cto/siteDeclaracao/views.py changed, reloading.
+2024-09-22 08:10:27,970 - WARNING - Not Found: /favicon.ico
+2024-09-22 08:10:28,147 - WARNING - Not Found: /favicon.ico
+2024-09-22 09:29:54,043 - WARNING - Not Found: /hello.world
+2024-09-22 09:29:54,375 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:54,721 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 09:29:55,074 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:55,450 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 09:29:55,809 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-22 09:29:56,167 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:56,492 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:56,818 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 09:29:57,173 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:57,509 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-22 09:29:57,860 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:58,233 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 09:29:58,587 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:58,917 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 09:29:59,265 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:59,618 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:29:59,967 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:00,343 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:00,700 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:01,058 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:01,390 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:01,751 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:02,103 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:02,452 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:02,803 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:03,160 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:03,522 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:03,879 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:04,236 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:04,996 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:05,324 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:05,656 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:06,001 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:06,349 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:06,710 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:07,068 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 09:30:07,433 - WARNING - Not Found: /index.php
+2024-09-22 09:30:07,792 - WARNING - Not Found: /public/index.php
+2024-09-22 09:30:08,148 - WARNING - Not Found: /index.php
+2024-09-22 09:30:08,495 - WARNING - Not Found: /index.php
+2024-09-22 09:30:50,206 - WARNING - Not Found: /favicon.ico
+2024-09-22 11:18:39,795 - WARNING - Not Found: /favicon.ico
+2024-09-22 11:35:08,009 - WARNING - Not Found: /favicon.ico
+2024-09-22 11:41:35,634 - WARNING - Not Found: /CMSModules/MediaLibrary/CMSPages/MultiFileUploader.ashx
+2024-09-22 12:11:34,068 - WARNING - Not Found: /actuator/gateway/routes
+2024-09-22 12:16:12,393 - WARNING - Not Found: /.env
+2024-09-22 16:47:23,546 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:47:33,130 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:50:28,123 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:51:05,433 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:51:06,082 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:51:30,681 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:51:44,695 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:22,749 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:25,608 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:25,794 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:34,578 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:34,989 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:43,347 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:52:44,023 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:53:09,640 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:53:19,873 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:53:59,212 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:26,451 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:27,535 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:29,133 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:29,209 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:29,400 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:29,744 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:34,512 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:34,681 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:34,866 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:35,034 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:35,193 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:35,344 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:35,541 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:54:35,675 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:59:50,418 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:59:51,625 - WARNING - Not Found: /favicon.ico
+2024-09-22 16:59:55,449 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:00,969 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:01,163 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:15,445 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:15,561 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:15,761 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:30,901 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:00:50,438 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:01:27,749 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:06,181 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:06,408 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:16,007 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:16,975 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:27,475 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:27,816 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:39,462 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:03:52,918 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:04:34,309 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:04:42,553 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:05:01,891 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:05:29,957 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:05:38,683 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:06:31,518 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:06:31,973 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:06:35,454 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:06:35,651 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:07:21,004 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:09:03,367 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:09:10,782 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:10:51,755 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:10:58,597 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:10:58,777 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:11:25,315 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:11:25,543 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:11:38,630 - WARNING - Not Found: /favicon.ico
+2024-09-22 17:23:14,053 - WARNING - Not Found: /favicon.ico
+2024-09-22 18:19:51,960 - WARNING - Not Found: /robots.txt
+2024-09-22 18:25:13,186 - WARNING - Not Found: /robots.txt
+2024-09-22 18:42:21,346 - WARNING - Not Found: /.env
+2024-09-22 19:14:18,637 - WARNING - Not Found: /hello.world
+2024-09-22 19:14:19,079 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:19,512 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 19:14:19,951 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:20,399 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 19:14:20,851 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-22 19:14:21,312 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:21,726 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:22,178 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 19:14:22,622 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:23,035 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-22 19:14:23,502 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:23,934 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 19:14:24,385 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:24,843 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 19:14:25,294 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:25,738 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:26,178 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:26,621 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:27,055 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:27,494 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:27,979 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:28,420 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:28,869 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:29,305 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:29,752 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:30,194 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:30,650 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:31,082 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:31,523 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:32,494 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:32,923 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:33,347 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:33,768 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:34,219 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:37,143 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:37,594 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 19:14:38,029 - WARNING - Not Found: /index.php
+2024-09-22 19:14:38,459 - WARNING - Not Found: /public/index.php
+2024-09-22 19:14:38,882 - WARNING - Not Found: /index.php
+2024-09-22 19:14:39,328 - WARNING - Not Found: /index.php
+2024-09-22 20:00:50,679 - WARNING - Not Found: /geoserver/wfs
+2024-09-22 20:00:52,880 - WARNING - Not Found: /geoserver/wfs
+2024-09-22 21:22:57,847 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-09-22 21:23:00,843 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-09-22 21:23:05,049 - WARNING - Not Found: /WuEL
+2024-09-22 21:23:11,652 - WARNING - Not Found: /a
+2024-09-22 21:23:15,196 - WARNING - Not Found: /download/file.ext
+2024-09-22 21:23:18,989 - WARNING - Not Found: /SiteLoader
+2024-09-22 21:23:22,300 - WARNING - Not Found: /mPlayer
+2024-09-22 21:23:26,995 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-09-22 21:49:15,161 - WARNING - Not Found: /.env
+2024-09-22 22:06:31,669 - WARNING - Not Found: /.env
+2024-09-22 22:07:08,277 - ERROR - Internal Server Error: /get/pesquisa_cto/20
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/getData/views.py", line 124, in info_cto
+    cto = CtoSecundaria.objects.get(pk=pk)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+CTO_manager.models.CtoSecundaria.DoesNotExist: CtoSecundaria matching query does not exist.
+2024-09-22 22:25:46,150 - WARNING - Not Found: /favicon.ico
+2024-09-22 22:30:29,482 - WARNING - Not Found: /geoserver/web/
+2024-09-22 22:31:59,859 - WARNING - Not Found: /.git/config
+2024-09-22 22:33:54,914 - WARNING - Not Found: /favicon.ico
+2024-09-22 22:36:14,206 - WARNING - Not Found: /favicon.ico
+2024-09-22 22:41:57,692 - WARNING - Not Found: /hello.world
+2024-09-22 22:41:58,175 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:41:58,626 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 22:41:59,133 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:41:59,592 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 22:42:00,084 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-22 22:42:00,546 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:00,995 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:01,454 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 22:42:01,914 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:02,400 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-22 22:42:02,859 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:03,310 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 22:42:03,763 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:04,244 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-22 22:42:04,705 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:05,173 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:05,617 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:06,088 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:06,541 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:06,993 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:07,537 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:08,613 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:10,311 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:10,809 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:11,261 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:11,714 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:12,190 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:12,645 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:13,129 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:13,988 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:14,475 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:14,933 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:15,390 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:15,852 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:16,312 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:16,779 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-22 22:42:17,279 - WARNING - Not Found: /index.php
+2024-09-22 22:42:17,726 - WARNING - Not Found: /public/index.php
+2024-09-22 22:42:18,197 - WARNING - Not Found: /index.php
+2024-09-22 22:42:18,640 - WARNING - Not Found: /index.php
+2024-09-22 23:20:38,739 - WARNING - Not Found: /containers/json
+2024-09-22 23:23:18,054 - ERROR - Internal Server Error: /get/pesquisa_cto/21
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/getData/views.py", line 124, in info_cto
+    cto = CtoSecundaria.objects.get(pk=pk)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+CTO_manager.models.CtoSecundaria.DoesNotExist: CtoSecundaria matching query does not exist.
+2024-09-23 02:21:25,702 - WARNING - Not Found: /hello.world
+2024-09-23 02:21:26,025 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:26,374 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-23 02:21:26,709 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:27,045 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-23 02:21:27,385 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-23 02:21:27,738 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:28,087 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:28,436 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-23 02:21:28,779 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:29,129 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-23 02:21:29,481 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:29,830 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-23 02:21:30,195 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:30,545 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-23 02:21:30,884 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:31,242 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:31,587 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:31,933 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:32,283 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:32,633 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:32,988 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:33,338 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:33,687 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:34,042 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:34,404 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 02:21:34,738 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-23 03:52:25,703 - WARNING - Not Found: /favicon.ico
+2024-09-23 05:07:42,501 - WARNING - Not Found: /_profiler/phpinfo
+2024-09-23 05:38:00,095 - WARNING - Not Found: /robots.txt
+2024-09-23 06:05:13,845 - WARNING - Not Found: /logincheck
+2024-09-23 06:23:54,740 - WARNING - Not Found: /_profiler/phpinfo
+2024-09-23 07:41:35,265 - WARNING - Not Found: /autodiscover/autodiscover.json
+2024-09-23 09:35:44,784 - WARNING - Not Found: /.env
+2024-09-23 09:35:47,713 - WARNING - Not Found: /API/.env
+2024-09-23 09:35:49,116 - WARNING - Not Found: /_static/.env
+2024-09-23 09:35:50,717 - WARNING - Not Found: /blogs/.env
+2024-09-23 09:35:54,514 - WARNING - Not Found: /client/.env
+2024-09-23 09:35:55,841 - WARNING - Not Found: /data/.env
+2024-09-23 09:36:02,543 - WARNING - Not Found: /developer/.env
+2024-09-23 09:54:18,526 - WARNING - Not Found: /robots.txt
+2024-09-23 09:54:20,077 - ERROR - Internal Server Error: /get/pesquisa_cto/22
+Traceback (most recent call last):
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/getData/views.py", line 124, in info_cto
+    cto = CtoSecundaria.objects.get(pk=pk)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/projeto_cto/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+CTO_manager.models.CtoSecundaria.DoesNotExist: CtoSecundaria matching query does not exist.
+2024-09-23 10:20:00,717 - WARNING - Not Found: /favicon.ico
+2024-09-23 10:52:14,486 - WARNING - Not Found: /favicon.ico
+2024-09-23 10:58:10,477 - INFO - URL completa recebida: https://www.htecfull.com/love/post/10-halbert-&-ellen
+2024-09-23 10:58:10,537 - WARNING - Not Found: /love/post/10-halbert-&-ellen
+2024-09-23 10:59:34,845 - WARNING - Not Found: /favicon.ico
+2024-09-23 13:38:18,710 - WARNING - Not Found: /actuator/gateway/routes
+2024-09-23 15:21:00,741 - WARNING - Not Found: /.git/config
+2024-09-23 15:21:55,853 - WARNING - Not Found: /login
+2024-09-23 15:24:36,327 - WARNING - Not Found: /owa/auth/logon.aspx
+2024-09-23 19:13:20,733 - WARNING - Not Found: /owa/auth/x.js
+2024-09-23 20:46:04,431 - WARNING - Not Found: /favicon.ico
+2024-09-23 20:46:46,052 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2024-09-23 20:46:47,259 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/11" 201 864
+2024-09-23 20:48:02,333 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2024-09-23 20:48:04,862 - DEBUG - https://api.mercadopago.com:443 "POST /checkout/preferences HTTP/11" 201 861
+2024-09-23 20:51:48,903 - WARNING - Forbidden (CSRF token missing.): /love/saveTemporaryData/
+2024-09-23 22:42:30,169 - WARNING - Not Found: /.git/config
+2024-09-23 23:13:56,097 - WARNING - Not Found: /.git/config
+2024-09-24 02:53:39,263 - WARNING - Not Found: /favicon.ico
+2024-09-24 02:53:40,422 - WARNING - Not Found: /ads.txt
+2024-09-24 02:53:41,141 - WARNING - Not Found: /app-ads.txt
+2024-09-24 02:53:41,873 - WARNING - Not Found: /sellers.json
+2024-09-24 03:48:17,506 - WARNING - Not Found: /favicon.ico
+2024-09-24 03:53:17,554 - WARNING - Not Found: /geoserver/web/
+2024-09-24 03:54:43,044 - WARNING - Not Found: /.git/config
+2024-09-24 06:01:59,812 - WARNING - Not Found: /robots.txt
+2024-09-24 06:02:03,726 - WARNING - Not Found: /sitemaps.xml
+2024-09-24 06:57:49,171 - WARNING - Not Found: /sitemaps.xml
+2024-09-24 07:52:16,713 - WARNING - Not Found: /ext-js/app/common/zld_product_spec.js
+2024-09-24 07:52:34,925 - WARNING - Not Found: /solr/
+2024-09-24 07:52:50,783 - WARNING - Not Found: /webfig/
+2024-09-24 07:53:07,951 - WARNING - Not Found: /cgi-bin/config.exp
+2024-09-24 07:53:26,333 - WARNING - Not Found: /owa/
+2024-09-24 07:53:27,320 - WARNING - Not Found: /showLogin.cc
+2024-09-24 07:53:47,894 - WARNING - Not Found: /favicon-32x32.png
+2024-09-24 07:53:48,836 - WARNING - Not Found: /favicon.ico
+2024-09-24 07:54:09,582 - WARNING - Not Found: /remote/login
+2024-09-24 07:54:10,566 - WARNING - Not Found: /favicon/favicon.ico
+2024-09-24 07:54:11,555 - WARNING - Not Found: /zabbix/favicon.ico
+2024-09-24 07:54:30,910 - WARNING - Not Found: /WebInterface/
+2024-09-24 07:54:50,685 - WARNING - Not Found: /aspera/faspex/
+2024-09-24 07:54:56,681 - WARNING - Not Found: /cf_scripts/scripts/ajax/ckeditor/ckeditor.js
+2024-09-24 07:54:57,660 - WARNING - Not Found: /api/session/properties
+2024-09-24 07:55:19,525 - WARNING - Not Found: /index.jsp
+2024-09-24 07:55:38,405 - WARNING - Not Found: /cgi-bin/authLogin.cgi
+2024-09-24 07:55:56,413 - WARNING - Not Found: /sugar_version.json
+2024-09-24 07:56:13,177 - WARNING - Not Found: /js/NewWindow_2_all.js
+2024-09-24 07:56:13,988 - WARNING - Not Found: /favicon.ico
+2024-09-24 07:56:15,048 - WARNING - Not Found: /sitecore/shell/sitecore.version.xml
+2024-09-24 07:56:33,684 - WARNING - Not Found: /console
+2024-09-24 07:56:47,899 - WARNING - Not Found: /Telerik.Web.UI.WebResource.axd
+2024-09-24 07:57:02,011 - WARNING - Not Found: /identity
+2024-09-24 09:02:06,013 - WARNING - Not Found: /favicon.ico
+2024-09-24 09:28:04,003 - WARNING - Not Found: /ab2g
+2024-09-24 09:28:04,657 - WARNING - Not Found: /ab2h
+2024-09-24 09:28:05,285 - WARNING - Not Found: /alive.php
+2024-09-24 09:28:10,931 - WARNING - Not Found: /t4
+2024-09-24 09:28:11,876 - WARNING - Not Found: /favicon.ico
+2024-09-24 09:28:13,130 - WARNING - Not Found: /teorema505
+2024-09-24 09:37:44,244 - WARNING - Not Found: /favicon.ico
+2024-09-24 11:05:41,719 - WARNING - Not Found: /favicon.ico
+2024-09-24 12:56:28,519 - WARNING - Not Found: /favicon.ico
+2024-09-24 13:25:48,087 - WARNING - Not Found: /actuator/gateway/routes
+2024-09-24 13:59:29,125 - WARNING - Not Found: /wp-login.php
+2024-09-24 18:54:51,006 - WARNING - Not Found: /.env
+2024-09-24 18:59:20,503 - WARNING - Not Found: /robots.txt
+2024-09-24 20:00:55,537 - WARNING - Not Found: /hello.world
+2024-09-24 20:00:55,976 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:00:56,425 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 20:00:56,867 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:00:57,319 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 20:00:57,731 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-24 20:00:58,143 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:00:58,592 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:00:59,045 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 20:00:59,506 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:00:59,920 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-24 20:01:00,371 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:00,784 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 20:01:01,229 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:01,641 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 20:01:02,055 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:02,499 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:02,927 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:03,394 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:03,890 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:04,325 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:04,771 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:05,212 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:05,625 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:06,049 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:07,852 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:08,305 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:08,742 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:09,179 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:09,632 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:10,474 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:10,944 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:11,390 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:11,840 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:12,265 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:12,699 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:13,143 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 20:01:13,581 - WARNING - Not Found: /index.php
+2024-09-24 20:01:14,014 - WARNING - Not Found: /public/index.php
+2024-09-24 20:01:14,427 - WARNING - Not Found: /index.php
+2024-09-24 20:01:14,929 - WARNING - Not Found: /index.php
+2024-09-24 20:17:00,866 - WARNING - Not Found: /favicon.ico
+2024-09-24 21:00:19,117 - WARNING - Not Found: /favicon.ico
+2024-09-24 21:04:38,245 - WARNING - Not Found: /favicon.ico
+2024-09-24 21:52:17,352 - WARNING - Not Found: /.env
+2024-09-24 22:02:51,368 - WARNING - Not Found: /actuator/health
+2024-09-24 22:05:30,660 - WARNING - Not Found: /hello.world
+2024-09-24 22:05:31,697 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:33,814 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 22:05:34,230 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:35,878 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 22:05:37,392 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-24 22:05:38,784 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:39,479 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:40,245 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 22:05:42,662 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:43,249 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-24 22:05:43,838 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:45,129 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 22:05:46,386 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:05:47,600 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 22:05:48,241 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 22:21:35,843 - WARNING - Not Found: /robots.txt
+2024-09-24 23:43:34,016 - WARNING - Not Found: /hello.world
+2024-09-24 23:43:34,379 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:34,750 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 23:43:35,173 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:35,561 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 23:43:35,958 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-24 23:43:36,411 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:36,849 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:37,223 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 23:43:37,614 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:38,026 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-24 23:43:38,450 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:38,876 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 23:43:39,279 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:42,084 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-24 23:43:42,462 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:42,837 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:43,618 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:45,706 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:47,332 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:48,017 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:49,791 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:50,476 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:51,140 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:51,503 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:51,885 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:52,253 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:53,823 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:56,951 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:58,175 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:59,276 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:43:59,958 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:44:03,024 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:44:04,810 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:44:05,508 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:44:06,207 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:44:08,269 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-24 23:44:09,738 - WARNING - Not Found: /index.php
+2024-09-24 23:44:11,064 - WARNING - Not Found: /public/index.php
+2024-09-24 23:44:11,746 - WARNING - Not Found: /index.php
+2024-09-24 23:44:12,169 - WARNING - Not Found: /index.php
+2024-09-25 01:37:52,787 - WARNING - Not Found: /dns-query
+2024-09-25 01:37:53,036 - WARNING - Not Found: /dns-query
+2024-09-25 01:37:53,320 - WARNING - Not Found: /dns-query
+2024-09-25 01:37:53,575 - WARNING - Not Found: /dns-query
+2024-09-25 01:37:53,846 - WARNING - Not Found: /dns-query
+2024-09-25 01:37:54,115 - WARNING - Not Found: /dns-query
+2024-09-25 01:37:54,402 - WARNING - Not Found: /query
+2024-09-25 01:37:54,684 - WARNING - Not Found: /query
+2024-09-25 01:37:54,946 - WARNING - Not Found: /query
+2024-09-25 01:37:55,221 - WARNING - Not Found: /query
+2024-09-25 01:37:55,495 - WARNING - Not Found: /query
+2024-09-25 01:37:55,754 - WARNING - Not Found: /query
+2024-09-25 01:37:56,037 - WARNING - Not Found: /resolve
+2024-09-25 01:37:56,309 - WARNING - Not Found: /resolve
+2024-09-25 01:37:56,580 - WARNING - Not Found: /resolve
+2024-09-25 01:37:56,857 - WARNING - Not Found: /resolve
+2024-09-25 01:37:57,128 - WARNING - Not Found: /resolve
+2024-09-25 01:37:57,402 - WARNING - Not Found: /resolve
+2024-09-25 01:37:57,915 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-09-25 01:37:58,645 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-09-25 02:25:46,716 - WARNING - Not Found: /ab2g
+2024-09-25 02:25:48,262 - WARNING - Not Found: /ab2h
+2024-09-25 02:25:49,877 - WARNING - Not Found: /alive.php
+2024-09-25 02:26:03,040 - WARNING - Not Found: /t4
+2024-09-25 02:26:05,369 - WARNING - Not Found: /favicon.ico
+2024-09-25 02:26:09,462 - WARNING - Not Found: /teorema505
+2024-09-25 03:58:24,599 - WARNING - Not Found: /favicon.ico
+2024-09-25 06:04:06,798 - WARNING - Not Found: /sitemap_index.xml
+2024-09-25 06:58:22,228 - WARNING - Not Found: /sitemap_index.xml
+2024-09-25 07:03:36,301 - WARNING - Not Found: /version
+2024-09-25 08:36:02,739 - WARNING - Not Found: /favicon.ico
+2024-09-25 08:54:31,910 - WARNING - Not Found: /.env
+2024-09-25 08:54:34,006 - WARNING - Not Found: /.env.test.local
+2024-09-25 08:54:35,559 - WARNING - Not Found: /leafer-app/.env
+2024-09-25 08:54:37,138 - WARNING - Not Found: /sitestatic/.env
+2024-09-25 08:54:39,436 - WARNING - Not Found: /app/config/.env
+2024-09-25 08:54:41,179 - WARNING - Not Found: /client-app/.env
+2024-09-25 08:54:43,439 - WARNING - Not Found: /app/client/.env
+2024-09-25 08:54:45,113 - WARNING - Not Found: /docker/app/.env
+2024-09-25 08:54:46,610 - WARNING - Not Found: /.env.test.sample
+2024-09-25 08:54:48,481 - WARNING - Not Found: /apps/client/.env
+2024-09-25 08:54:50,032 - WARNING - Not Found: /Sources/API/.env
+2024-09-25 08:54:52,432 - WARNING - Not Found: /sources/api/.env
+2024-09-25 08:54:53,874 - WARNING - Not Found: /application/.env
+2024-09-25 08:54:55,134 - WARNING - Not Found: /app2-static/.env
+2024-09-25 08:54:57,185 - WARNING - Not Found: /app1-static/.env
+2024-09-25 08:54:58,870 - WARNING - Not Found: /packages/app/.env
+2024-09-25 08:55:00,245 - WARNING - Not Found: /test-network/.env
+2024-09-25 08:55:01,557 - WARNING - Not Found: /back-end/app/.env
+2024-09-25 08:55:03,443 - WARNING - Not Found: /packages/api/.env
+2024-09-25 08:55:04,920 - WARNING - Not Found: /app/frontend/.env
+2024-09-25 08:55:06,677 - WARNING - Not Found: /testwork_json/.env
+2024-09-25 08:55:08,659 - WARNING - Not Found: /app/config/dev/.env
+2024-09-25 08:55:10,779 - WARNING - Not Found: /testing/docker/.env
+2024-09-25 08:55:12,519 - WARNING - Not Found: /.env.testing.example
+2024-09-25 09:50:09,991 - WARNING - Not Found: /.env
+2024-09-25 09:50:11,796 - WARNING - Not Found: /App/.env
+2024-09-25 09:50:13,434 - WARNING - Not Found: /APP/.env
+2024-09-25 09:50:16,140 - WARNING - Not Found: /Api/.env
+2024-09-25 09:50:18,256 - WARNING - Not Found: /test.php
+2024-09-25 11:34:08,937 - WARNING - Not Found: /config.json
+2024-09-25 11:34:10,167 - WARNING - Not Found: /.env
+2024-09-25 11:34:11,365 - WARNING - Not Found: /telescope/requests
+2024-09-25 11:34:12,583 - WARNING - Not Found: /info.php
+2024-09-25 11:34:13,705 - WARNING - Not Found: /.git/config
+2024-09-25 11:53:43,979 - WARNING - Not Found: /hello.world
+2024-09-25 11:53:44,564 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:45,862 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 11:53:46,293 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:48,125 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 11:53:48,591 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-25 11:53:50,572 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:51,490 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:52,113 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 11:53:52,510 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:52,895 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-25 11:53:53,304 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:53,729 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 11:53:54,154 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:54,700 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 11:53:55,151 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:55,562 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:55,966 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:56,412 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:57,103 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:57,550 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:58,554 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:53:58,998 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:00,253 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:00,877 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:01,737 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:03,621 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:04,111 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:04,587 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:05,844 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:07,472 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:08,507 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:09,576 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:10,029 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:10,411 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:14,567 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:15,277 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 11:54:15,910 - WARNING - Not Found: /index.php
+2024-09-25 11:54:16,349 - WARNING - Not Found: /public/index.php
+2024-09-25 11:54:20,260 - WARNING - Not Found: /index.php
+2024-09-25 11:54:21,351 - WARNING - Not Found: /index.php
+2024-09-25 12:07:17,518 - WARNING - Not Found: /favicon.ico
+2024-09-25 12:42:28,161 - WARNING - Not Found: /robots.txt
+2024-09-25 14:02:40,927 - WARNING - Not Found: /actuator/gateway/routes
+2024-09-25 15:19:23,912 - WARNING - Not Found: /autodiscover/autodiscover.json
+2024-09-25 16:27:50,912 - WARNING - Not Found: /_ignition/execute-solution
+2024-09-25 16:27:53,940 - WARNING - Not Found: /_ignition/execute-solution
+2024-09-25 16:27:59,952 - WARNING - Not Found: /_ignition/execute-solution
+2024-09-25 16:28:02,957 - WARNING - Not Found: /_ignition/execute-solution
+2024-09-25 16:28:05,961 - WARNING - Not Found: /_ignition/execute-solution
+2024-09-25 16:28:08,992 - WARNING - Not Found: /_ignition/execute-solution
+2024-09-25 17:51:07,631 - WARNING - Not Found: /favicon.ico
+2024-09-25 21:09:46,989 - WARNING - Not Found: /.git/config
+2024-09-25 21:33:25,216 - WARNING - Not Found: /.git/config
+2024-09-25 21:55:51,953 - WARNING - Not Found: /favicon.ico
+2024-09-25 22:01:51,226 - WARNING - Not Found: /geoserver/web/
+2024-09-25 22:03:42,280 - WARNING - Not Found: /.git/config
+2024-09-25 23:55:05,653 - WARNING - Not Found: /hello.world
+2024-09-25 23:55:06,834 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:07,201 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 23:55:07,577 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:07,946 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 23:55:08,302 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-09-25 23:55:08,664 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:09,049 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:09,431 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 23:55:09,789 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:10,160 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-09-25 23:55:10,531 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:10,897 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 23:55:11,274 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:11,634 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-09-25 23:55:11,980 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:12,339 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:12,710 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:13,096 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:13,477 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:13,852 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:14,229 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:14,608 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:14,963 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:15,333 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:15,689 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:16,034 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:16,407 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:16,781 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:17,137 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:17,838 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:18,201 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:18,586 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:18,958 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:19,334 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:19,711 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:20,086 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-09-25 23:55:20,455 - WARNING - Not Found: /index.php
+2024-09-25 23:55:20,827 - WARNING - Not Found: /public/index.php
+2024-09-25 23:55:21,208 - WARNING - Not Found: /index.php
+2024-09-25 23:55:21,589 - WARNING - Not Found: /index.php
+2024-09-30 11:03:14,775 - WARNING - Not Found: /favicon.ico
+2024-09-30 11:24:36,095 - WARNING - Not Found: /robots.txt
+2024-09-30 14:53:00,153 - WARNING - Not Found: /favicon.ico
+2024-09-30 15:48:55,856 - WARNING - Not Found: /robots.txt
+2024-09-30 17:26:39,774 - WARNING - Not Found: /webtools/control/forgotPassword/ProgramExport
+2024-09-30 17:31:17,562 - WARNING - Not Found: /actuator/gateway/routes
+2024-09-30 18:21:49,075 - WARNING - Not Found: /favicon.ico
+2024-09-30 20:22:51,481 - WARNING - Not Found: /owa/auth/x.js
+2024-09-30 21:05:29,456 - WARNING - Not Found: /favicon.ico
+2024-09-30 23:54:08,645 - WARNING - Not Found: /favicon.ico
+2024-10-01 00:09:03,744 - WARNING - Not Found: /owa/auth/logon.aspx
+2024-10-01 00:27:35,889 - WARNING - Not Found: /epa/scripts/win/nsepa_setup.exe
+2024-10-01 01:00:53,844 - WARNING - Not Found: /favicon.ico
+2024-10-01 02:07:25,134 - WARNING - Not Found: /cgi-bin/luci/;stok=/locale
+2024-10-01 04:36:15,308 - WARNING - Not Found: /favicon.ico
+2024-10-01 04:36:38,725 - WARNING - Not Found: /favicon.ico
+2024-10-01 16:26:35,068 - WARNING - Not Found: /robots.txt
+2024-10-01 17:12:28,472 - WARNING - Not Found: /favicon.ico
+2024-10-01 18:16:36,118 - WARNING - Not Found: /robots.txt
+2024-10-01 18:46:06,812 - WARNING - Not Found: /hello.world
+2024-10-01 18:46:08,254 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:09,930 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-01 18:46:12,667 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:14,542 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-10-01 18:46:16,278 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-10-01 18:46:17,939 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:19,660 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:21,431 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-01 18:46:23,166 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:24,949 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-10-01 18:46:26,788 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:28,643 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-01 18:46:30,470 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:32,172 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-10-01 18:46:33,825 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:35,489 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:37,185 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:38,836 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:40,696 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:42,393 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:44,202 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:45,845 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:47,617 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:49,322 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:50,961 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:52,688 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:54,405 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:56,216 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:46:58,019 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:01,515 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:03,244 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:04,869 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:06,640 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:08,346 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:10,167 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:11,948 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-01 18:47:13,647 - WARNING - Not Found: /index.php
+2024-10-01 18:47:15,256 - WARNING - Not Found: /public/index.php
+2024-10-01 18:47:16,839 - WARNING - Not Found: /index.php
+2024-10-01 18:47:18,431 - WARNING - Not Found: /index.php
+2024-10-01 19:01:59,487 - WARNING - Not Found: /robots.txt
+2024-10-01 19:13:17,810 - WARNING - Not Found: /cgi-bin/luci/;stok=/locale
+2024-10-01 20:11:50,430 - WARNING - Not Found: /ab2g
+2024-10-01 20:11:51,951 - WARNING - Not Found: /ab2h
+2024-10-01 20:11:53,458 - WARNING - Not Found: /alive.php
+2024-10-01 20:12:06,022 - WARNING - Not Found: /t4
+2024-10-01 20:12:08,236 - WARNING - Not Found: /favicon.ico
+2024-10-01 20:12:11,190 - WARNING - Not Found: /teorema505
+2024-10-01 20:25:21,678 - WARNING - Not Found: /robots.txt
+2024-10-01 20:47:14,404 - WARNING - Not Found: /favicon.ico
+2024-10-01 22:47:36,645 - WARNING - Not Found: /robots.txt
+2024-10-01 23:52:51,115 - WARNING - Not Found: /favicon.ico
+2024-10-01 23:52:52,406 - WARNING - Not Found: /robots.txt
+2024-10-01 23:52:56,419 - WARNING - Not Found: /.well-known/security.txt
+2024-10-02 00:08:11,807 - WARNING - Not Found: /robots.txt
+2024-10-02 00:19:58,906 - WARNING - Not Found: /version
+2024-10-02 02:20:22,184 - WARNING - Not Found: /HNAP1/
+2024-10-02 02:48:14,723 - WARNING - Not Found: /robots.txt
+2024-10-02 04:15:40,507 - WARNING - Not Found: /robots.txt
+2024-10-02 05:16:07,588 - WARNING - Not Found: /robots.txt
+2024-10-02 05:46:38,371 - WARNING - Not Found: /hello.world
+2024-10-02 05:46:38,833 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:39,297 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 05:46:39,758 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:40,219 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 05:46:40,685 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-10-02 05:46:41,150 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:41,622 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:42,082 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 05:46:42,548 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:42,997 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-10-02 05:46:43,442 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:43,890 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 05:46:44,336 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:44,797 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 05:46:45,269 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:45,731 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:46,197 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:46,650 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:47,110 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:47,552 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:48,016 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:48,478 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:48,961 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:49,457 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:49,922 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:50,370 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:50,823 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:51,283 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:51,756 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:52,723 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:53,165 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:53,615 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:54,041 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:54,510 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:54,946 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:55,389 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 05:46:55,838 - WARNING - Not Found: /index.php
+2024-10-02 05:46:56,288 - WARNING - Not Found: /public/index.php
+2024-10-02 05:46:56,730 - WARNING - Not Found: /index.php
+2024-10-02 05:46:57,180 - WARNING - Not Found: /index.php
+2024-10-02 06:55:30,712 - WARNING - Not Found: /robots.txt
+2024-10-02 07:43:16,485 - WARNING - Not Found: /.env
+2024-10-02 07:43:17,863 - WARNING - Not Found: /.config.yaml
+2024-10-02 07:43:19,213 - WARNING - Not Found: /.env.bak
+2024-10-02 07:43:20,391 - WARNING - Not Found: /.env.example
+2024-10-02 07:43:21,509 - WARNING - Not Found: /.env.prod
+2024-10-02 07:43:22,651 - WARNING - Not Found: /.env.production
+2024-10-02 07:43:24,112 - WARNING - Not Found: /.env.production
+2024-10-02 07:43:25,772 - WARNING - Not Found: /.json
+2024-10-02 07:43:31,266 - WARNING - Not Found: /api/.env
+2024-10-02 07:43:32,884 - WARNING - Not Found: /api/.env
+2024-10-02 07:43:34,020 - WARNING - Not Found: /app/.env
+2024-10-02 07:43:35,153 - WARNING - Not Found: /app_dev.php/_profiler/open
+2024-10-02 07:43:36,489 - WARNING - Not Found: /app_dev.php/_profiler/phpinfo
+2024-10-02 07:43:38,037 - WARNING - Not Found: /apps/.env
+2024-10-02 07:43:39,410 - WARNING - Not Found: /backend/.env
+2024-10-02 07:43:41,162 - WARNING - Not Found: /client_secrets.json
+2024-10-02 07:43:42,376 - WARNING - Not Found: /config/.env
+2024-10-02 07:43:43,918 - WARNING - Not Found: /core/.env
+2024-10-02 07:43:45,367 - WARNING - Not Found: /debug/default/view
+2024-10-02 07:43:47,393 - WARNING - Not Found: /demo/.env
+2024-10-02 07:43:50,207 - WARNING - Not Found: /dev/.env
+2024-10-02 07:43:51,364 - WARNING - Not Found: /frontend/web/debug/default/view
+2024-10-02 07:43:52,552 - WARNING - Not Found: /info/
+2024-10-02 07:43:54,035 - WARNING - Not Found: /infos/
+2024-10-02 07:43:55,201 - WARNING - Not Found: /infophp.php
+2024-10-02 07:43:56,518 - WARNING - Not Found: /library/.env
+2024-10-02 07:43:57,712 - WARNING - Not Found: /new/.env
+2024-10-02 07:43:59,124 - WARNING - Not Found: /phpinfo.php
+2024-10-02 07:44:00,605 - WARNING - Not Found: /phpinfos.php
+2024-10-02 07:44:01,868 - WARNING - Not Found: /pinfo.php
+2024-10-02 07:44:03,035 - WARNING - Not Found: /public/.env
+2024-10-02 07:44:04,246 - WARNING - Not Found: /staging/.env
+2024-10-02 07:44:05,468 - WARNING - Not Found: /tool/view/phpinfo.view.php
+2024-10-02 08:38:59,341 - WARNING - Not Found: /hello.world
+2024-10-02 09:12:40,381 - WARNING - Not Found: /robots.txt
+2024-10-02 10:34:05,748 - WARNING - Not Found: /dns-query
+2024-10-02 10:34:06,029 - WARNING - Not Found: /dns-query
+2024-10-02 10:34:06,304 - WARNING - Not Found: /dns-query
+2024-10-02 10:34:06,591 - WARNING - Not Found: /dns-query
+2024-10-02 10:34:06,853 - WARNING - Not Found: /dns-query
+2024-10-02 10:34:07,128 - WARNING - Not Found: /dns-query
+2024-10-02 10:34:07,403 - WARNING - Not Found: /query
+2024-10-02 10:34:07,662 - WARNING - Not Found: /query
+2024-10-02 10:34:07,940 - WARNING - Not Found: /query
+2024-10-02 10:34:08,221 - WARNING - Not Found: /query
+2024-10-02 10:34:08,488 - WARNING - Not Found: /query
+2024-10-02 10:34:08,763 - WARNING - Not Found: /query
+2024-10-02 10:34:09,052 - WARNING - Not Found: /resolve
+2024-10-02 10:34:09,323 - WARNING - Not Found: /resolve
+2024-10-02 10:34:09,598 - WARNING - Not Found: /resolve
+2024-10-02 10:34:09,857 - WARNING - Not Found: /resolve
+2024-10-02 10:34:10,132 - WARNING - Not Found: /resolve
+2024-10-02 10:34:10,407 - WARNING - Not Found: /resolve
+2024-10-02 10:34:11,009 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-10-02 10:34:11,716 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-10-02 10:55:09,609 - WARNING - Not Found: /favicon.ico
+2024-10-02 10:59:10,053 - WARNING - Not Found: /geoserver/web/
+2024-10-02 11:00:50,996 - WARNING - Not Found: /.git/config
+2024-10-02 16:40:57,471 - WARNING - Not Found: /global-protect/login.esp
+2024-10-02 16:40:57,492 - WARNING - Not Found: /+CSCOE+/logon.html
+2024-10-02 16:40:57,493 - WARNING - Not Found: /remote/login
+2024-10-02 16:47:34,607 - WARNING - Not Found: /autodiscover/autodiscover.json
+2024-10-02 18:09:26,916 - WARNING - Not Found: /hello.world
+2024-10-02 18:09:27,398 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 18:09:27,864 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 18:09:28,318 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-02 18:09:28,764 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-10-02 18:09:29,181 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-10-02 19:21:09,972 - WARNING - Not Found: /actuator/gateway/routes
+2024-10-02 20:31:08,414 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-10-02 21:22:26,350 - WARNING - Forbidden (Referer checking failed - no Referer.): /
+2024-10-03 04:21:24,545 - WARNING - Not Found: /favicon.ico
+2024-10-03 06:47:34,340 - WARNING - Not Found: /cgi-bin/luci/;stok=/locale
+2024-10-03 07:05:33,329 - WARNING - Not Found: /favicon.ico
+2024-10-03 07:11:20,992 - WARNING - Not Found: /geoserver/web/
+2024-10-03 07:13:01,823 - WARNING - Not Found: /.git/config
+2024-10-03 09:24:09,566 - WARNING - Not Found: /robots.txt
+2024-10-03 10:41:37,264 - WARNING - Not Found: /favicon.ico
+2024-10-03 13:20:14,715 - WARNING - Not Found: /.env
+2024-10-03 14:36:19,567 - WARNING - Not Found: /hello.world
+2024-10-03 14:36:20,249 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:21,069 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 14:36:21,811 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:22,543 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 14:36:23,303 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-10-03 14:36:24,104 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:24,829 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:25,561 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 14:36:26,350 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:27,011 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-10-03 14:36:27,763 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:28,558 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 14:36:29,343 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:30,122 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 14:36:30,867 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:31,662 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:32,437 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:33,232 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:34,029 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:34,701 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:35,389 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:36,118 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:36,853 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:37,590 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:38,382 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:39,106 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:39,877 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:40,549 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:41,289 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:42,765 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:43,394 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:44,068 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:44,923 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:45,641 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:46,393 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:47,245 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 14:36:48,028 - WARNING - Not Found: /index.php
+2024-10-03 14:36:48,841 - WARNING - Not Found: /public/index.php
+2024-10-03 14:36:49,695 - WARNING - Not Found: /index.php
+2024-10-03 14:36:50,466 - WARNING - Not Found: /index.php
+2024-10-03 18:25:29,152 - WARNING - Not Found: /remote/login
+2024-10-03 18:44:42,834 - WARNING - Not Found: /owa/auth/logon.aspx
+2024-10-03 19:02:20,684 - WARNING - Not Found: /hello.world
+2024-10-03 19:02:21,191 - WARNING - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:21,681 - WARNING - Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 19:02:22,181 - WARNING - Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:22,698 - WARNING - Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 19:02:23,196 - WARNING - Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+2024-10-03 19:02:23,763 - WARNING - Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:24,273 - WARNING - Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:24,811 - WARNING - Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 19:02:25,340 - WARNING - Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:25,903 - WARNING - Not Found: /phpunit/Util/PHP/eval-stdin.php
+2024-10-03 19:02:26,444 - WARNING - Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:26,955 - WARNING - Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 19:02:27,479 - WARNING - Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:28,013 - WARNING - Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+2024-10-03 19:02:28,530 - WARNING - Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:29,050 - WARNING - Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:29,552 - WARNING - Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:30,061 - WARNING - Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:30,597 - WARNING - Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:31,121 - WARNING - Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:31,626 - WARNING - Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:32,133 - WARNING - Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:32,648 - WARNING - Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:33,173 - WARNING - Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:33,675 - WARNING - Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:34,218 - WARNING - Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:34,730 - WARNING - Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:35,243 - WARNING - Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:35,769 - WARNING - Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:36,774 - WARNING - Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:37,272 - WARNING - Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:37,755 - WARNING - Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:38,250 - WARNING - Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:38,764 - WARNING - Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:41,760 - WARNING - Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:42,271 - WARNING - Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2024-10-03 19:02:42,803 - WARNING - Not Found: /index.php
+2024-10-03 19:02:43,319 - WARNING - Not Found: /public/index.php
+2024-10-03 19:02:43,853 - WARNING - Not Found: /index.php
+2024-10-03 19:02:44,409 - WARNING - Not Found: /index.php
+2024-10-03 19:38:19,808 - WARNING - Not Found: /actuator/gateway/routes
